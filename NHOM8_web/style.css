@@ -10,6 +10,229 @@ body
     height: 100vh;
     font-family: 'Times New Roman', Times, serif;
 }
+.background
+{
+    width: 100%;
+}
+.background #img
+{
+    width: 100%;
+    height: 100vh;
+    background: url("/IMG/background.jpg");
+    animation:  brightness-animation 2.5s ease-in-out infinite alternate;
+    
+}
+@keyframes brightness-animation{
+    0% {
+        filter: brightness(0.7); /* Bắt đầu ở độ tối (0) */
+      }
+      100% {
+        filter: brightness(1); /* Kết thúc ở độ rõ (1) */
+      }
+  }
+.container
+{
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.left 
+{
+    width: 10%;
+    margin-left: 50px;   
+    color: white;
+    cursor: pointer;
+    display: flex;
+    float: left;
+}
+.right
+{
+    width: 80px;
+    color: white;
+    display: flex;
+    float: right;   
+    cursor: pointer;
+    align-content: flex-end;
+    margin-right: 20px;
+}
+.container .menu.active {
+    display: flex; /* Hiển thị menu khi active */
+}
+
+.container .menu.active .left, .container .menu.active .right {
+    display: none; /* Ẩn thẻ left và right khi active */
+}
+.background .left i , .right i
+{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.menu
+{
+    width: 70%;
+    list-style: none;
+    display: none;
+    top: 50px;
+}
+ .menu a
+{
+    font-size: 1.2rem;
+    color:white;
+    cursor: pointer;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+    text-decoration: none;
+}
+.menu a:hover 
+{
+    color: orange;
+    border-bottom: .1rem solid orange;
+}
+
+.container:hover .menu 
+{
+    display: flex; /* Hiển thị menu khi hover vào container */
+    flex-direction: row;
+    align-items: center;    
+    justify-content:space-between;
+}
+.container:hover
+{
+    background-color: #000;
+}
+#img
+{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+}
+.word
+{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    margin-top: 15rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-delay: calc(var(--i)*3.5s) ;
+    animation-duration: 4s;
+    animation-name: animate;
+    visibility: hidden;
+}
+@keyframes animate
+{
+    0%
+    {
+        visibility: visible;
+        filter: blur(20pt);
+    }
+    25%,
+    75%
+    {
+        filter: blur(0);
+        color: #000;
+    }
+    100%
+    {
+        filter: blur(20pt);
+    }
+}
+
+.word h1
+{
+    color: white;
+    font-size: 40px;
+    margin: 15px 0;
+}
+.word p
+{
+    color: white;
+    font-size: 15px;
+}
+
+.products
+{
+    background: rgb(250,247,242);
+    width: 100%;
+    height: 1100px;
+    padding: 4rem 10%;
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+.item-left
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.item-left img
+{
+   /* border: 2px solid black;*/
+    height: 45%;
+    /* animation: animation 2s infinite linear;
+    animation-delay: 0.5s; */
+}
+@keyframes animation 
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(-10px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+}
+.item-right
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.right-left
+{
+    width: 45%;
+    margin-left: 25px;
+}
+.right-left img
+{
+    /*border: 2px solid black;*/
+    height: 20%;
+    /* border-radius: 0px 0px 150px 150px;
+    animation: animation 2s infinite linear; */
+    animation-delay: 0.5s;
+}
+.right-right
+{
+    width: 43%;
+    margin-left: 42px;
+}
+.right-right img
+{
+    /*border: 2px solid black;*/
+    margin-top: 5rem;
+    height: 19.5%;
+    /* border-radius: 0px 0px 150px 150px;
+    animation: animation 2s infinite linear; */
+    animation-delay: 0.5s;
+}
 .pledge
 {
     width: 100%;
@@ -303,3 +526,79 @@ body
     font-size: 22px;
     line-height: 40px;
 }
+.reveal {
+    position: relative;
+    opacity: 0;
+  }
+.reveal.active {
+    opacity: 1;
+}
+.active.background {
+    animation: background 1s ease-in;
+}
+.active.products {
+    animation: products 1s ease-in;
+}
+.active.pledge {
+    animation: pledge 1s ease-in;
+}
+.active.feedbacks
+{
+    animation: feedbacks 1s ease-in;
+}
+.active.address
+{
+    animation: address 1s ease-in;
+}
+@keyframes background {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+@keyframes products {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+  
+@keyframes pledge {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+@keyframes feedbacks {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+@keyframes address {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
