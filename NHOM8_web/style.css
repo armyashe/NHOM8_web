@@ -536,9 +536,7 @@ body
 .reveal.active {
     opacity: 1;
 }
-.active.background {
-    animation: background 1s ease-in;
-}
+
 .active.products {
     animation: products 1s ease-in;
 }
@@ -553,16 +551,8 @@ body
 {
     animation: address 1s ease-in;
 }
-@keyframes background {
-    0% {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-}
+
+
 @keyframes products {
     0% {
       transform: translateX(-100px);
