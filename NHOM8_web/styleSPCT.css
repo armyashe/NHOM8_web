@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+   /* box-sizing: border-box;*/
+}
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: white;
+
+    
+}
+.background {
+    height: 10%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+
+    background: rgba(250, 247, 242, 0.696);
+    
+}
+
+.background img {
+    max-height: 50px;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu a {
+
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: orange;
+    border-bottom: .1rem solid orange;
+}
+.container {
+    margin-top: 150px;
+    width: 80%;
+    height: 100%;
+    padding-left:10%;
+    
+}
+
+.top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: 500px;
+}
+
+.picture {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture img {
+    height: 110%;
+    width: 130%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+.content .info{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 110%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+    list-style-type: square;
+    
+}
+.content .price{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 3rem;
+}
+.availability
+{ 
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center; 
+    border: 1px solid gray;
+    background-color: rgba(0, 0, 0, -0.6) ;
+}
+.quantity
+{
+    display: flex;
+}
+.button{
+    width: 200px;
+    height: 50px;
+    background: rgba(60, 58, 58, 0.992);
+    color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    text-align: center;
+    line-height: 45px; 
+    margin-left: 20px;
+    list-style: none;
+}
+.button:hover
+{
+    background-color: rgba(202, 208, 163, 0.564);
+    font-size: 15px;
+    cursor: pointer;
+    color: black;
+}
+.address
+{
+    width: 100%;
+    background-color: rgb(38,38,38);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+}
+.img-address
+{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.img-address img
+{
+    height: 250px;
+    width: 70%;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+.icon-address
+{
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%;
+}
+.icon-address i
+{
+    line-height: 30px;
+    font-size: 20px;
+}
+.policy-left
+{
+    width: 80%;
+    height: 100px;
+    margin-top: 20%;
+    margin-left: 9rem;
+    font-size: 19px;
+    line-height: 40px;
+}
+.policy-left ul li
+{
+    margin-left: 7%;
+}
+.policy-right
+{
+    width: 79%;
+    height: 100px;
+    margin-top: 20%;
+    margin-left: 6rem;
+    font-size: 19px;
+    line-height: 40px;
+}
+.policy-right ul li
+{
+    margin-left: 7%;
+}

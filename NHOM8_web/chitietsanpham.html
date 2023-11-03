@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleSPCT.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Sản phẩm chi tiết</title>
+
+</head>
+
+<body>
+    <div class="background">
+        <a href="index.html"><img src="IMG/logo2.jpg" alt=""></a>
+        <div class="menu">
+            <a href="product.html?Bàn-trà">Bàn Trà</a>
+            <a href="product.html?Gương">Gương</a>
+            <a href="product.html?Bàn-trang-điểm">Bàn trang điểm</a>
+            <a href="product.html?Đèn-cây">Đèn cây</a>
+            <a href="login.html">Đăng nhập</a>
+            <a href=""><i class='bx bx-cart-alt'></i></a>
+        </div>
+    </div>
+    <hr style="border: 2px solid black;">
+    <div class="container">
+        <div class="top">
+            <div class="picture">
+                <img src="" alt="">
+            </div>
+            <div class="content">
+                <h2 class="name"></h2>
+                <div class="info"></div>
+                <div class="price"></div>
+                <br>Availability: Còn hàng
+
+                <div class="quantity">
+                    <label for="quantity">Số lượng:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="5" style="width: 40px; height: 30px; text-align: center;">
+                    <a href="" style="text-decoration: none;"><div class="button">Thêm vào giỏ hàng</div></a>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <!--phần cuối cùng-->
+    <div class="address">
+        <div class="img-address">
+            <img src="./IMG/logo.jpg" alt="">
+            <div class="icon-address">
+                <i class='bx bxs-home'> 273 An Dương Vương,Phường 3,Q.5,Tp.HCM</i>
+                <i class='bx bxs-phone'> 0123456789</i>
+                <i class='bx bxs-envelope'> noithatvn.com</i>
+                <i class='bx bxl-facebook-square'> facebook.com/noithatvn</i>
+            </div>
+        </div>
+
+        <div class="policy-left">
+            <ul>
+                <i class='bx bx-poll'><span style="font-weight: bolder;"> Chính sách bán hàng</span></i>
+                <li>Chính sách thanh toán</li>
+                <li>Chính sách vận chuyển</li>
+                <li>Chính sách bảo hành & đổi trả</li>
+            </ul>
+        </div>
+        <div class="policy-right">
+            <ul>
+                <i class='bx bx-support'><span style="font-weight: bolder;"> Hỗ trợ khách hàng</span></i>
+                <li>Tại Showroom</li>
+                <li>Trở thành nhà phân phối</li>
+                <li>Tuyển dụng</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="javascripts/data.js"></script>
+    <script>
+
+        function updateListUser(u, newData) {
+            var list = getListUser();
+            for (var i = 0; i < list.length; i++) {
+                if (equalUser(u, list[i])) {
+                    list[i] = (newData ? newData : u);
+                }
+            }
+            setListUser(list);
+        }
+
+        function phanTich_URL_chiTietSanPham() {
+            var nameProduct = window.location.href.split('?')[1];
+            // lấy tên
+            var maProduct;
+
+            // tách theo dấu '-' vào gắn lại bằng dấu ' ', code này giúp bỏ hết dấu '-' thay vào bằng khoảng trắng.
+            // code này làm ngược lại so với lúc tạo href cho sản phẩm trong file classes.js
+            nameProduct = nameProduct.split('-').join(' ');
+            console.log(nameProduct);
+
+
+            function timKiemTheoTrang(products, maProduct) {
+                for (var i = 0; i < products.length; i++) {
+                    if (products[i].masp === maProduct) {
+                        return products[i];
+                    }
+                }
+                // Return null or handle the case where the product is not found.
+                return null;
+            }
+            for (var p of list_products) {
+                if (nameProduct == p.namesearch) {
+                    maProduct = p.masp;
+                    break;
+                }
+            }
+            console.log(maProduct);
+
+            function timKiemTheoMa(products, maProduct) {
+                for (var i = 0; i < products.length; i++) {
+                    if (products[i].masp === maProduct) {
+                        return products[i];
+                    }
+                }
+                // Return null or handle the case where the product is not found.
+                return null;
+            }
+            sanPhamHienTai = timKiemTheoMa(list_products, maProduct);
+
+            var divChiTiet = document.getElementsByClassName('content')[0];
+
+            // Đổi title
+            document.title = nameProduct + ' - Nội Thất';
+
+            // Cập nhật tên h1
+            var h1 = divChiTiet.getElementsByClassName('name')[0];
+
+            h1.innerHTML = sanPhamHienTai.name;
+
+            // Cập nhật sao
+
+            var price = divChiTiet.getElementsByClassName('price')[0];
+
+            price.innerHTML = `<strong>` + sanPhamHienTai.price + `₫</strong>`;
+
+            var info = document.getElementsByClassName('info')[0];
+            var s = '';
+
+            function addThongSo(label, value) {
+                if (value) {
+                    s += label + ': ' + value + '<br>';
+                }
+            }
+
+            addThongSo('Chất liệu ', sanPhamHienTai.detail.material);
+            addThongSo('Kích thước ', sanPhamHienTai.detail.size);
+            addThongSo('Khung viền ', sanPhamHienTai.detail.border);
+            addThongSo('Màu ', sanPhamHienTai.detail.color);
+            addThongSo('Kích thước bàn ', sanPhamHienTai.detail.surface);
+            addThongSo('Khác ', sanPhamHienTai.detail.more);
+            addThongSo('Chiều dài ', sanPhamHienTai.detail.height);
+            addThongSo('Chiều rộng ', sanPhamHienTai.detail.width);
+            addThongSo('Tính năng ', sanPhamHienTai.detail.feature);
+            addThongSo('Bộ sản phẩm ', sanPhamHienTai.detail.include);
+            addThongSo('Gương dày ', sanPhamHienTai.detail.thick);
+            addThongSo('Màu sắc khung ', sanPhamHienTai.detail.border_color);
+            addThongSo('Màu sắc mặt bàn ', sanPhamHienTai.detail.surface_color);
+            addThongSo('Sử dụng nguồn điện ', sanPhamHienTai.detail.voltage);
+            addThongSo('Bóng đèn ', sanPhamHienTai.detail.bulb);
+
+            if (s !== '') {
+                info.innerHTML = s;
+            }
+
+
+
+            var hinh = document.getElementsByClassName('picture')[0];
+            hinh = hinh.getElementsByTagName('img')[0];
+            hinh.src = sanPhamHienTai.img;
+
+        } phanTich_URL_chiTietSanPham();
+
+    </script>
+
+</body>
+
+</html>

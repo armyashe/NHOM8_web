@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="javascripts/main.js"></script>
+    
         
     <title>Nội thất</title>
 </head>
 <body>
     <div class="background">
-        <div id="img">
+        <div id="img"> <!--liên quan tới file js dùng để chuyển các hình ảnh-->
+            <!--thẻ word là các chữ xuất hiện ở đầu trang-->
             <div class="word" style="--i:0">
                 <h1>TẠO XU HƯỚNG CAO CẤP</h1>
                 <p>... thương hiệu thiết kế, thi công nội thất hàng đầu Việt Nam</p>
             </div>
             <div class="word" style="--i:1">
                 <h1>KIẾN TẠO KHÔNG GIAN ĐẲNG CẤP</h1>
-                <p>Sống chất từ chi tiết nhỏ nhất</p>
+                <p>Sống chất từ chi tiết nhỏ nhấ</p>
             </div>
-            <div class="word open" style="--i:2">
+            <div class="word " style="--i:2">
                 <h1>ĐEM LẠI NHỮNG GIÁ TRỊ TỐT ĐẸP NHẤT CHO CỘNG ĐỒNG</h1>
                 <p>Những mẫu thiết kế hiện đại cho cuộc sống tiện nghi</p>
             </div>
@@ -29,37 +30,37 @@
                 <p>Không chỉ bán sản phẩm - Phải bán cho khách hàng NIỀM TIN</p>
             </div>
         </div>
+        <!--hai cái hình ba gạch bên trái và bên phải-->
         <div class="container">
             <div class="left">
                 <a href=""><i class='bx bx-menu bx-rotate-90' style="color: white;"></i></a>
             </div>
-            <div class="menu">
-                <a href="#img">HOME</a>
-                <a href="#about">ABOUT</a>
-                <a href="">PRODUCTS</a>
+            <div class="menu"> <!--thanh menu -->
+                <a href="#img">TRANG CHỦ</a>
+                <a href="#about">VỀ CHÚNG TÔI</a>
+                <a href="sanpham.html">SẢN PHẨM</a>
                 <a href="#feedback">FEEDBACK</a>
-                <a href="">SIGN IN</a>
-                <a href=""><i class='bx bx-cart'style="font-size:25px"></i></a>
+                <a href="login.html">ĐĂNG NHẬP</a>
             </div>
             <div class="right">
                 <a href="" class="toggle-menu"><i class='bx bx-menu bx-rotate-90' style="color: white;"></i></a>
             </div>
         </div>
     </div>     
-        
+        <!--phần sản phẩm giới thiệu-->
     <div class="reveal products">
         <div class="item-left">
             <img src="./IMG/Pula-BTD11.jpg" alt="">
             <p style="margin-top: 20px; font-size: 16px;font-family: sans-serif;">Riêng cho bạn!</p>
             <p style="margin-top: 25px; font-family: SVN-Gallery Modern, Sans-serif; font-size: 25px;">Bàn trang điểm thiết kế riêng cho bạn!</p>
-            <p style="margin-top: 20px;font-family:sans-serif; font-size: 16px; line-height: 30px;">Nàng có một căn phòng đẹp & chỉ còn thiếu một chiếc bàn phù hợp. Bạn muốn kích thước và màu sắc phải hoản hảo như ý bạn. Và bạn tìm thấy INTERDIOR, không có gì tuyệt vời hơn được phục vụ bạn.</p>
+            <p style="margin-top: 20px;font-family:sans-serif; font-size: 16px; line-height: 30px;">Nàng có một căn phòng đẹp & chỉ còn thiếu một chiếc bàn phù hợp. Bạn muốn kích thước và màu sắc phải hoản hảo như ý bạn. Và bạn tìm thấy Lipstick.Box, không có gì tuyệt vời hơn được phục vụ nàng.</p>
         </div>
         <div class="item-right">
             <div class="right-left">
                 <img src="./IMG/sp2.png" alt="">
                 <p style="margin-top: 25px; font-size: 16px;font-family: sans-serif;">Nội thất cho phái đẹp</p>
                 <p style="margin-top: 25px; font-family: SVN-Gallery Modern, Sans-serif; font-size: 25px;">Tìm thấy bàn & ghế trang điểm...</p>
-                <p style="margin-top: 20px;font-family:sans-serif; font-size: 16px; line-height: 30px;">…Tủ & kệ cũng ở đây, chọn online hoặc đến shop INTERDIOR để team có thể tư vấn kĩ hơn.</p>
+                <p style="margin-top: 20px;font-family:sans-serif; font-size: 16px; line-height: 30px;">…Tủ & kệ cũng ở đây, chọn online hoặc đến shop LipstickBox để team có thể tư vấn kĩ hơn.</p>
                 <img src="./IMG/sp4.png" alt="" style="height: 20%; margin-top: 20px;">
             </div>
             <div class="right-right">
@@ -73,6 +74,7 @@
             </div>
         </div>
     </div>
+    <!--phần tại sao chọn chúng tôi-->
     <div class="reveal pledge" id="about">
         <div class="text-center">
             <span>TẠI SAO CHỌN CHÚNG TÔI</span>
@@ -89,7 +91,7 @@
                     </div>
                     <div class="info-text-2">
                         <span>Chất lượng sản phẩm</span>
-                        <span>INTERDIOR tập trung vào các sản phẩm mang tính đột phá và phù hợp với nhu cầu người sử dụng</span>
+                        <span>XHOME tập trung vào các sản phẩm mang tính đột phá và phù hợp với nhu cầu người sử dụng</span>
                         <div class="text-img-2">
                                 <img src="./IMG/w3-3b4.png" alt="" >
                         </div>
@@ -129,6 +131,7 @@
                 </div>
             </div>
         </div>
+        <!--phần phản hồi-->
         <div id="feedback" class="reveal feedbacks">
             <div class="feedback-left">
                 <p style="font-size: 30px; font-weight: bolder; ">Feedback</p>
@@ -157,6 +160,7 @@
                 </div>
             </div>
         </div>
+        <!--phần cuối cùng-->
         <div class="reveal address" >
             <div class="img-address">
                 <img src="./IMG/logo.jpg" alt="">
@@ -170,7 +174,7 @@
             
             <div class="policy-left">
                 <ul>
-                    <span style="font-weight: bolder;">   Chính sách bán hàng</span>    
+                    <i class='bx bx-poll'><span style="font-weight: bolder;">   Chính sách bán hàng</span></i>    
                     <li>Chính sách thanh toán</li>
                     <li>Chính sách vận chuyển</li>
                     <li>Chính sách bảo hành & đổi trả</li>
@@ -178,7 +182,7 @@
             </div>
             <div class="policy-right">
                 <ul>
-                    <span style="font-weight: bolder;">   Hỗ trợ khách hàng</span>    
+                    <i class='bx bx-support'><span style="font-weight: bolder;">   Hỗ trợ khách hàng</span></i>    
                     <li>Tại Showroom</li>
                     <li>Trở thành nhà phân phối</li>
                     <li>Tuyển dụng</li>
@@ -186,6 +190,6 @@
             </div>
         </div>
     </div>
- 
+    <script src="javascripts/main.js"></script>
 </body>
 </html>
