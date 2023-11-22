@@ -9,31 +9,19 @@
 </head>
 
 <body>
-    <div class="login">
+    <div id="login">
         <h2>ĐĂNG NHẬP</h2>
-        <form>
-            <input type="text" name="username" placeholder="username">
-            <input type="password" name="password" id="password" placeholder="password" style="margin-right: 12px;"><i class="bi bi-eye-slash" id="togglePassword" style="margin-right: 5px;"></i>
-            <a href="sanpham.html" style="text-decoration: none;"><div class="btn-primary">Đăng nhập</div></a>
+        <form >
+            <input type="text" name="username" id="usernamereg" placeholder="username" required autocomplete="off" />
+            <input type="password" name="password" id="passreg" placeholder="password" required autocomplete="off" />
+            <button type="submit" onclick="login()" style="text-decoration: none;" class="btn-primary-login" >Đăng nhập</button>
         </form>
         <div class="register">
             <p>Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a></p>
         </div>
     </div>
-    <script>
-        const togglePassword = document.querySelector("#togglePassword");
-        const password = document.querySelector("#password");
+    <script src="javascripts/login.js"></script>
 
-        togglePassword.addEventListener("click", function () {
-            // toggle the type attribute
-            const type = password.getAttribute("type") === "password" ? "text" : "password";
-            password.setAttribute("type", type);
-
-            // toggle the icon
-            this.classList.toggle("bi-eye");
-        });
-
-    </script>
 </body>
 
 </html>
