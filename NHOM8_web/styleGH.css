@@ -144,3 +144,22 @@ tbody tr td a:hover {
     background-color: #e0a800;
     /* Darker yellow on hover */
 }
+.footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -8%;
+}
+.footer button
+{
+    width: 20%;
+    height: 50%;
+    background-color: pink;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
