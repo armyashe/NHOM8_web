@@ -150,10 +150,10 @@ function updatePaginationButtons() {
 updatePaginationButtons();
 
 
-function User(username, pass,email, products, donhang) {
+function User(username,pass,email, products, donhang) {
+    this.username = username || '';
 	this.pass = pass || '';
 	this.email = email || '';
-	this.username = username || '';
     this.products = products || [];
 	this.donhang = donhang || [];
 }

@@ -11,14 +11,15 @@
 
 <body>
     <div class="background">
-        <a href="index.html"><img src="IMG/logo2.jpg" alt=""></a>
+        <a href="sanpham.html"><img src="IMG/logo2.jpg" alt=""></a>
         <div class="menu">
             <a href="product.html?Bàn-trà">Bàn Trà</a>
             <a href="product.html?Gương">Gương</a>
             <a href="product.html?Bàn-trang-điểm">Bàn trang điểm</a>
             <a href="product.html?Đèn-cây">Đèn cây</a>
-            <a href="login.html">Đăng nhập</a>
-            <a href=""><i class='bx bx-cart-alt'></i></a>
+            <div class="login"><a  href="login.html">Đăng nhập</a></div>
+            <a href="" id="logoutButton">Đăng xuất</a>
+            <a href="giohang.html"><i class='bx bx-cart-alt'></i></a>
         </div>
 
     </div>
@@ -95,10 +96,8 @@
     </div>
     <script src="javascripts/data.js"></script>
     <script src="javascripts/search.js"></script>
+    <script src="javascripts/login.js"></script>
     <script>
-        // Your existing code here
-
-        // Variables for pagination
         const itemsPerPage = 6;
         let currentPage = 1;
 

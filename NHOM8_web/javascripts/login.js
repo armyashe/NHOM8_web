@@ -2,6 +2,7 @@ const btn = document.querySelector('.btn-primary-login');
 const inputname = document.querySelector('.username');
 const inputemail = document.querySelector('.email');
 const inputpass = document.querySelector('.password');
+const confirmPass = document.querySelector('.pass');
 const inputusernamereg = document.querySelector('#usernamereg');
 const inputpassreg = document.querySelector('#passreg');
 
@@ -31,14 +32,11 @@ function login() {
     console.log(listUser)
     console.log(user)
     var check = false;
-    alert('1')
 
     for (var u of listUser) {
         if (equalUser(user, u)) {
             setCurrentUser(u);
             check = true;
-            console.log('1')
-            
         }
     }
     console.log(check)
@@ -57,6 +55,7 @@ function getuser() {
     var username = inputname.value;
     var email = inputemail.value;
     var pass = inputpass.value;
+    var confirmPassword = confirmPass.value;
     if (username === "") {
         alert("Vui lòng nhập username!");
         return false;
@@ -65,12 +64,16 @@ function getuser() {
         alert("Vui lòng nhập lại pass ( ít nhất 8 kí tự )!");
         return false;
     }
+    if (pass !== confirmPassword) {
+        alert("Mật khẩu và mật khẩu nhập lại không khớp!");
+        return false;
+    }
     if (email === "") {
         alert("Vui lòng nhập email!");
         return false;
     }
 
-    var user = new User(email,username, pass);
+    var user = new User(username, pass,email);
     var listUser = getListUser();
     for (var u of listUser) {
         if (user.username === u.username) {
@@ -110,10 +113,10 @@ function setListUser(l) {
     window.localStorage.setItem('ListUser', JSON.stringify(l));
 }
 
-function User(username, pass,email, products, donhang) {
+function User(username,pass,email, products, donhang) {
+    this.username = username || '';
 	this.pass = pass || '';
 	this.email = email || '';
-	this.username = username || '';
     this.products = products || [];
 	this.donhang = donhang || [];
 }

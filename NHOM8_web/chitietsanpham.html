@@ -12,33 +12,28 @@
 
 <body>
     <div class="background">
-        <a href="index.html"><img src="IMG/logo2.jpg" alt=""></a>
+        <a href="sanpham.html"><img src="IMG/logo2.jpg" alt=""></a>
         <div class="menu">
             <a href="product.html?Bàn-trà">Bàn Trà</a>
             <a href="product.html?Gương">Gương</a>
             <a href="product.html?Bàn-trang-điểm">Bàn trang điểm</a>
             <a href="product.html?Đèn-cây">Đèn cây</a>
-            <a href="login.html">Đăng nhập</a>
-            <a href=""><i class='bx bx-cart-alt'></i></a>
+            <div class="login"><a  href="login.html">Đăng nhập</a></div>
+            <a href="giohang.html"><i class='bx bx-cart-alt'></i></a>
         </div>
     </div>
     <hr style="border: 2px solid black;">
     <div class="container">
         <div class="top">
             <div class="picture">
-                <img src="" alt="">
+                <img src="" alt="" id="productImage">
             </div>
             <div class="content">
                 <h2 class="name"></h2>
                 <div class="info"></div>
                 <div class="price"></div>
                 <br>Availability: Còn hàng
-
-                <div class="quantity">
-                    <label for="quantity">Số lượng:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" max="5" style="width: 40px; height: 30px; text-align: center;">
-                    <a href="" style="text-decoration: none;"><div class="button">Thêm vào giỏ hàng</div></a>
-                </div>   
+                <div class="button" onclick="them()"><a href="giohang.html">Thêm vào giỏ hàng</a></div>
             </div>
         </div>
     </div>
@@ -73,8 +68,21 @@
     </div>
 
     <script src="javascripts/data.js"></script>
+    
     <script>
-
+        function them() {
+            var name = document.querySelector(".name");
+            var user = getCurrentUser();
+            var t = new Date();
+            console.log(user.products);
+            user.products.push({
+                "name": name.innerHTML,
+                "soluong": 1,
+                "date": t
+            });
+            setCurrentUser(user);
+            updateListUser(user);
+        }
         function updateListUser(u, newData) {
             var list = getListUser();
             for (var i = 0; i < list.length; i++) {
@@ -91,7 +99,7 @@
             var maProduct;
 
             // tách theo dấu '-' vào gắn lại bằng dấu ' ', code này giúp bỏ hết dấu '-' thay vào bằng khoảng trắng.
-            // code này làm ngược lại so với lúc tạo href cho sản phẩm trong file classes.js
+            // code này làm ngược lại so với lúc tạo href cho sản phẩm trong file search.js
             nameProduct = nameProduct.split('-').join(' ');
             console.log(nameProduct);
 
@@ -106,7 +114,7 @@
                 return null;
             }
             for (var p of list_products) {
-                if (nameProduct == p.namesearch) {
+                if (nameProduct === p.namesearch) {
                     maProduct = p.masp;
                     break;
                 }
@@ -135,6 +143,9 @@
             h1.innerHTML = sanPhamHienTai.name;
 
             // Cập nhật sao
+
+
+
 
             var price = divChiTiet.getElementsByClassName('price')[0];
 
@@ -168,14 +179,39 @@
             if (s !== '') {
                 info.innerHTML = s;
             }
+
+
+
             var hinh = document.getElementsByClassName('picture')[0];
             hinh = hinh.getElementsByTagName('img')[0];
             hinh.src = sanPhamHienTai.img;
+            console.log(hinh.src);
+
+
+            var hinh = document.getElementById('productImage');
+
+            // Assuming sanPhamHienTai.img contains the image source
+            hinh.src = sanPhamHienTai.img;
+
+            hinh.addEventListener('mousemove', function (event) {
+                var rect = hinh.getBoundingClientRect();
+                var x = event.clientX - rect.left; // X coordinate within the element
+                var y = event.clientY - rect.top;  // Y coordinate within the element
+
+                var percentX = (x / rect.width) * 100;
+                var percentY = (y / rect.height) * 100;
+
+                hinh.style.objectPosition = percentX + '% ' + percentY + '%';
+            });
+
+            hinh.addEventListener('mouseleave', function () {
+                hinh.style.objectPosition = 'center center'; // Reset to the center position or any other default position you want
+            });
 
         } phanTich_URL_chiTietSanPham();
 
     </script>
-
+    <script src="javascripts/login.js"></script>
 </body>
 
 </html>

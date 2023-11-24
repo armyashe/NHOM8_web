@@ -122,3 +122,7 @@ function giamSoLuong(tenSanPham) {
     // Cập nhật danh sách giỏ hàng
     listcart(user);
 }
+function muaHangThanhCong() {
+    // Hiển thị thông báo
+    alert("Mua hàng thành công!");
+}
