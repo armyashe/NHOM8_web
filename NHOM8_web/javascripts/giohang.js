@@ -38,7 +38,7 @@ function listcart(user) {
                 <button class="btn btn-warning" onclick="giamSoLuong('` + p.name + `')">-</button>
                 </td>
                 <td>` + p.price + ` ₫</td>
-                <td>`+ formatNumberWithCommasAndDecimal(parseFloat(p.price) * soluongSp) + ` ₫</td>
+                <td>` + formatPrice(parseFloat(p.price) * soluongSp) + `</td>
                 <td>
                     <button class="btn btn-danger" onclick="xoaSanPham('` + p.name + `')">Xóa</button>
                 </td>
@@ -81,9 +81,16 @@ function findProductByName(productList, name) {
     }
     return null;
 }
-function formatNumberWithCommasAndDecimal(number) {
-    var formattedNumber = number.toFixed(3).replace(".", ".");
-    return formattedNumber.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+function formatPrice(number) {
+    var formattedPrice = number.toFixed(3).replace(/\d(?=(\d{3})+\.)/g, '$&.');
+    
+    // Loại bỏ các số 0 ở sau dấu thập phân
+    formattedPrice = formattedPrice.replace(/\.?0+$/, '');
+
+    // Bỏ dấu thập phân nếu không có chữ số thập phân
+    formattedPrice = formattedPrice.replace(/\.$/, '');
+
+    return formattedPrice +'.000'+ ' ₫';
 }
 function xoaSanPham(tenSanPham) {
     // Xóa sản phẩm từ danh sách sản phẩm của người dùng
