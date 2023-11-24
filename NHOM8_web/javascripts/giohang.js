@@ -25,6 +25,9 @@ function listcart(user) {
     for (var i = 0; i < mergedProducts.length; i++) {
         var p = mergedProducts[i];
         var soluongSp = p.soluong;
+        var priceWithoutDecimal = parseFloat(p.price.split('.').join(''));
+        var productPrice = priceWithoutDecimal * soluongSp;
+        totalPrice += productPrice;
         s += `
             <tr>
                 <td>` + (i + 1) + `</td>
@@ -38,12 +41,18 @@ function listcart(user) {
                 <button class="btn btn-warning" onclick="giamSoLuong('` + p.name + `')">-</button>
                 </td>
                 <td>` + p.price + ` ₫</td>
-                <td>` + formatPrice(parseFloat(p.price) * soluongSp) + `</td>
+                <td>` + formatPrice(parseFloat(p.price.split('.').join('')) * soluongSp) + `</td>
                 <td>
                     <button class="btn btn-danger" onclick="xoaSanPham('` + p.name + `')">Xóa</button>
                 </td>
             </tr>`;
     }
+    s += `
+        <tr>
+            <td colspan="5"></td>
+            <td><strong>Total:</strong></td>
+            <td>` + formatPrice(totalPrice) + `</td>
+        </tr>`;
     list.innerHTML = s;
 }
 function timKiemTheoMa(list, ten) {
@@ -82,15 +91,14 @@ function findProductByName(productList, name) {
     return null;
 }
 function formatPrice(number) {
-    var formattedPrice = number.toFixed(3).replace(/\d(?=(\d{3})+\.)/g, '$&.');
-    
-    // Loại bỏ các số 0 ở sau dấu thập phân
-    formattedPrice = formattedPrice.replace(/\.?0+$/, '');
+    // Làm tròn số đến số nguyên gần nhất
+    var roundedPrice = Math.round(number);
 
-    // Bỏ dấu thập phân nếu không có chữ số thập phân
-    formattedPrice = formattedPrice.replace(/\.$/, '');
+    // Định dạng giá làm tròn bằng dấu phẩy cho dấu phân cách hàng nghìn
+    var formattedPrice = roundedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-    return formattedPrice +'.000'+ ' ₫';
+    // Thêm ký hiệu tiền tệ
+    return formattedPrice + ' ₫';
 }
 function xoaSanPham(tenSanPham) {
     // Xóa sản phẩm từ danh sách sản phẩm của người dùng
