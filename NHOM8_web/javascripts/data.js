@@ -7,6 +7,9 @@ var list_products =
     "company": "Bàn trang điểm",
     "companysearch": "B%C3%A0n trang %C4%91i%E1%BB%83m",
     "img": "IMG/Ban_trang_diem_TC22.jpg",
+    "img1":"IMG/screenshot_1699523625.png",
+    "img2":"IMG/screenshot_1699523705.png",
+    "img3":"IMG/screenshot_1699523720.png",
     "price": "799.000",
     "listprice": "500-1milion",
     "detail":
@@ -24,6 +27,9 @@ var list_products =
     "company": "Bàn trang điểm",
     "companysearch": "B%C3%A0n trang %C4%91i%E1%BB%83m",
     "img": "IMG/Ban_Trang_Điem_TC56.jpg",
+    "img1":"IMG/screenshot_1699524101.png",
+    "img2":"IMG/screenshot_1699524125.png",
+    "img3":"IMG/screenshot_1699524159.png",
     "price": "1.199.000",
     "listprice": "1-5milion",
     "detail":
@@ -41,6 +47,9 @@ var list_products =
     "company": "Bàn trang điểm",
     "companysearch": "B%C3%A0n trang %C4%91i%E1%BB%83m",
     "img": "IMG/Ban_trang_diem_TC17.jpg",
+    "img1":"IMG/screenshot_1699523961.png",
+    "img2":"IMG/screenshot_1699523981.png",
+    "img3":"IMG/screenshot_1699523989.png",
     "price": "1.399.000",
     "listprice": "1-5milion",
     "detail":
@@ -59,6 +68,9 @@ var list_products =
     "company": "Bàn trang điểm",
     "companysearch": "B%C3%A0n trang %C4%91i%E1%BB%83m",
     "img": "IMG/Ban_trang_diem_TC23.jpg",
+    "img1":"IMG/Ban_trang_diem_TC23.jpg",
+    "img2":"IMG/screenshot_1699524058.png",
+    "img3":"IMG/screenshot_1699524073.png",
     "price": "399.000",
     "listprice": "0-500thousand",
     "detail":
@@ -77,8 +89,11 @@ var list_products =
     "company": "Bàn trang điểm",
     "companysearch": "B%C3%A0n trang %C4%91i%E1%BB%83m",
     "img": "IMG/Ban_trang_diem_TC10.jpg",
+    "img1":"IMG/Ban_trang_diem_TC10.jpg",
+    "img2":"IMG/screenshot_1699523457.png",
+    "img3":"IMG/screenshot_1699523497.png",
     "price": "799.000",
-    "listprice": "1-5milion",
+    "listprice": "500-1milion",
     "detail":
     {
         "material" : "Gỗ công nghiệp chống ẩm MDF.",
@@ -95,6 +110,9 @@ var list_products =
     "company": "Bàn trang điểm",
     "companysearch": "B%C3%A0n trang %C4%91i%E1%BB%83m",
     "img": "IMG/Ban_trang_diem_BTD01.jpg",
+    "img1":"IMG/screenshot_1699523273.png",
+    "img2":"IMG/screenshot_1699523288.png",
+    "img3":"IMG/screenshot_1699523296.png",
     "price": "4.199.000",
     "listprice": "1-5milion",
     "detail":
@@ -114,6 +132,9 @@ var list_products =
     "company": "Bàn trang điểm",
     "companysearch": "B%C3%A0n trang %C4%91i%E1%BB%83m",
     "img": "IMG/Ban_trang_điem_BTD09.jpg",
+    "img1":"IMG/Ban_trang_điem_BTD09.jpg",
+    "img2":"IMG/bid09.jpg",
+    "img3":"IMG/btd09..jpg",
     "price": "4.399.000",
     "listprice": "1-5milion",
     "detail":
@@ -133,6 +154,9 @@ var list_products =
     "company": "Bàn trang điểm",
     "companysearch": "B%C3%A0n trang %C4%91i%E1%BB%83m",
     "img": "IMG/Ban_trang_diem_BTD05.jpg",
+    "img1":"IMG/Ban_trang_diem_BTD05.jpg",
+    "img2":"IMG/Ban_trang_diem_BTD05(1).jpg",
+    "img3":"IMG/Ban_trang_diem_BTD05(2).jpg",
     "price": "2.250.000",
     "listprice": "1-5milion",
     "detail":
@@ -156,6 +180,9 @@ var list_products =
     "company": "Gương",
     "companysearch": "G%C6%B0%C6%A1ng",
     "img": "IMG/Guong_trang_tri_GTT03.jpg",
+    "img1":"IMG/screenshot_1699525417.png",
+    "img2":"IMG/screenshot_1699525425.png",
+    "img3":"IMG/screenshot_1699525434.png",
     "price": "750.000",
     "listprice": "500-1milion",
     "detail":
@@ -177,6 +204,9 @@ var list_products =
     "company": "Gương",
     "companysearch": "G%C6%B0%C6%A1ng",
     "img": "IMG/Guong_trang_tri_GTT04.jpg",
+    "img1":"IMG/screenshot_1699525491.png",
+    "img2":"IMG/screenshot_1699525513.png",
+    "img3":"IMG/screenshot_1699525522.png",
     "price": "740.000",
     "listprice": "500-1milion",
     "detail":
@@ -197,6 +227,9 @@ var list_products =
     "company": "Gương",
     "companysearch": "G%C6%B0%C6%A1ng",
     "img": "IMG/Guong_trang_tri_GTT17_D50.jpg",
+    "img1":"IMG/screenshot_1699526107.png",
+    "img2":"IMG/screenshot_1699526101.png",
+    "img3":"IMG/screenshot_1699526115.png",
     "price": "1.090.000",
     "listprice": "1-5milion",
     "detail":
@@ -217,6 +250,9 @@ var list_products =
     "company": "Gương",
     "companysearch": "G%C6%B0%C6%A1ng",
     "img": "IMG/Guong_trang_tri_GTT17_D40.jpg",
+    "img1":"IMG/Guong_trang_tri_GTT17_D40.jpg",
+    "img2":"IMG/screenshot_1699526218.png",
+    "img3":"IMG/screenshot_1699526239.png",
     "price": "1.500.000",
     "listprice": "1-5milion",
     "detail":
@@ -237,6 +273,9 @@ var list_products =
     "company": "Gương",
     "companysearch": "G%C6%B0%C6%A1ng",
     "img": "IMG/Guong_trang_tri_GTT05.jpg",
+    "img1":"IMG/screenshot_1699525684.jpg",
+    "img2":"IMG/screenshot_1699525721.jpg",
+    "img3":"IMG/screenshot_1699525752.jpg",
     "price": "800.000",
     "listprice": "500-1milion",
     "detail":
@@ -258,6 +297,9 @@ var list_products =
     "company": "Gương",
     "companysearch": "G%C6%B0%C6%A1ng",
     "img": "IMG/Guong_trang_tri_GTT10.jpg",
+    "img1":"IMG/screenshot_1699525847.png",
+    "img2":"IMG/screenshot_1699525855.png",
+    "img3":"IMG/screenshot_1699525881.png",
     "price": "650.000",
     "listprice": "500-1milion",
     "detail":
@@ -279,6 +321,9 @@ var list_products =
     "company": "Gương",
     "companysearch": "G%C6%B0%C6%A1ng",
     "img": "IMG/Guong_trang_tri_GTT07_D60.jpg",
+    "img1":"IMG/screenshot_1699525973.png",
+    "img2":"IMG/screenshot_1699526033.png",
+    "img3":"IMG/Guong_trang_tri_GTT07_D60.jpg",
     "price": "450.000",
     "listprice": "0-500thousand",
     "detail":
@@ -303,6 +348,9 @@ var list_products =
     "company": "Bàn trà",
     "companysearch": "B%C3%A0n tr%C3%A0",
     "img": "IMG/Ban_tra_BT07.jpg",
+    "img1":"IMG/screenshot_1699522883.png",
+    "img2":"IMG/screenshot_1699522900.png",
+    "img3":"IMG/screenshot_1699522909.png",
     "price": "6.090.000",
     "listprice": "5-7milion",
     "detail":
@@ -321,6 +369,9 @@ var list_products =
     "company": "Bàn trà",
     "companysearch": "B%C3%A0n tr%C3%A0",
     "img": "IMG/Ban_tra_BT18.jpg",
+    "img1":"IMG/screenshot_1699522769.png",
+    "img2":"IMG/screenshot_1699522787.png",
+    "img3":"IMG/screenshot_1699522798.png",
     "price": "4.599.000",
     "listprice": "1-5milion",
     "detail":
@@ -340,6 +391,10 @@ var list_products =
     "company": "Bàn trà",
     "companysearch": "B%C3%A0n tr%C3%A0",
     "img": "IMG/Ban_tra_BT21.jpg",
+    "img": "IMG/Ban_tra_BT18.jpg",
+    "img1":"IMG/screenshot_1699523001.png",
+    "img2":"IMG/screenshot_1699523019.png",
+    "img3":"IMG/screenshot_1699523029.png",
     "price": "5.799.000",
     "listprice": "5-7milion",
     "detail":
@@ -359,6 +414,9 @@ var list_products =
     "company": "Bàn trà",
     "companysearch": "B%C3%A0n tr%C3%A0",
     "img": "IMG/Ban_Tab_BPT10.jpg",
+    "img1":"IMG/screenshot_1699522324.png",
+    "img2":"IMG/screenshot_1699522363.png",
+    "img3":"IMG/screenshot_1699522384.png",
     "price": "2.899.000",
     "listprice": "1-5milion",
     "detail":
@@ -378,6 +436,9 @@ var list_products =
     "company": "Bàn trà",
     "companysearch": "B%C3%A0n tr%C3%A0",
     "img": "IMG/Ban_tra_BT23.jpg",
+    "img1":"IMG/screenshot_1699523100.png",
+    "img2":"IMG/screenshot_1699523117.png",
+    "img3":"IMG/screenshot_1699523125.png",
     "price": "2.500.000",
     "listprice": "1-5milion",
     "detail":
@@ -398,6 +459,9 @@ var list_products =
     "company": "Bàn trà",
     "companysearch": "B%C3%A0n tr%C3%A0",
     "img": "IMG/Ban_Tab_BPT08.jpg",
+    "img1":"IMG/screenshot_1699522447.png",
+    "img2":"IMG/screenshot_1699522481.png",
+    "img3":"IMG/Ban_Tab_BPT08.jpg",
     "price": "2.000.000",
     "listprice": "1-5milion",
     "detail":
@@ -419,6 +483,9 @@ var list_products =
     "company": "Bàn trà",
     "companysearch": "B%C3%A0n tr%C3%A0",
     "img": "IMG/Ban_tra_BT25.jpg",
+    "img1":"IMG/screenshot_1699523194.png",
+    "img2":"IMG/screenshot_1699523207.png",
+    "img3":"IMG/screenshot_1699523214.png",
     "price": "5.300.000",
     "listprice": "5-7milion",
     "detail":
@@ -442,6 +509,9 @@ var list_products =
     "company": "Đèn cây",
     "companysearch": "%C4%90%C3%A8n c%C3%A2y",
     "img": "IMG/Den_cay_DC04.jpg",
+    "img1":"IMG/screenshot_1699524346.png",
+    "img2":"IMG/screenshot_1699524354.png",
+    "img3":"IMG/screenshot_1699524362.png",
     "price": "1.400.000",
     "listprice": "1-5milion",
     "detail":
@@ -462,6 +532,9 @@ var list_products =
     "company": "Đèn cây",
     "companysearch": "%C4%90%C3%A8n c%C3%A2y",
     "img": "IMG/Den_cay_DC07.jpg",
+    "img1":"IMG/screenshot_1699524426.png",
+    "img2":"IMG/screenshot_1699524406.png",
+    "img3":"IMG/screenshot_1699524419.png",
     "price": "490.000",
     "listprice": "0-500thousand",
     "detail":
@@ -483,6 +556,9 @@ var list_products =
     "company": "Đèn cây",
     "companysearch": "%C4%90%C3%A8n c%C3%A2y",
     "img": "IMG/Den_cay_DC10.jpg",
+    "img1":"IMG/screenshot_1699524553.png",
+    "img2":"IMG/screenshot_1699524567.png",
+    "img3":"IMG/screenshot_1699524575.png",
     "price": "1.360.000",
     "listprice": "1-5milion",
     "detail":
@@ -503,6 +579,9 @@ var list_products =
     "company": "Đèn cây",
     "companysearch": "%C4%90%C3%A8n c%C3%A2y",
     "img": "IMG/Den_cay_DC12.jpg",
+    "img1":"IMG/screenshot_1699524682.png",
+    "img2":"IMG/screenshot_1699524641.png",
+    "img3":"IMG/screenshot_1699524674.png",
     "price": "989.000",
     "listprice": "500-1milion",
     "detail":
@@ -523,6 +602,9 @@ var list_products =
     "company": "Đèn cây",
     "companysearch": "%C4%90%C3%A8n c%C3%A2y",
     "img": "IMG/Den_cay_DC13.jpg",
+    "img1":"IMG/screenshot_1699524983.png",
+    "img2":"IMG/screenshot_1699524973.png",
+    "img3":"IMG/screenshot_1699525003.png",
     "price": "1.090.000",
     "listprice": "1-5milion",
     "detail":
@@ -543,6 +625,9 @@ var list_products =
     "company": "Đèn cây",
     "companysearch": "%C4%90%C3%A8n c%C3%A2y",
     "img": "IMG/Den_cay_DC15.jpg",
+    "img1":"IMG/screenshot_1699524756.png",
+    "img2":"IMG/screenshot_1699524773.png",
+    "img3":"IMG/screenshot_1699524779.png",
     "price": "999.000",
     "listprice": "500-1milion",
     "detail":
@@ -564,6 +649,9 @@ var list_products =
     "company": "Đèn cây",
     "companysearch": "%C4%90%C3%A8n c%C3%A2y",
     "img": "IMG/Den_cay_DC20.jpg",
+    "img1":"IMG/screenshot_1699524885.png",
+    "img2":"IMG/screenshot_1699524878.png",
+    "img3":"IMG/Den_cay_DC20.jpg",
     "price": "450.000",
     "listprice": "500-1milion",
     "detail":

@@ -74,22 +74,39 @@ h1 {
 
 .picture {
     width: 100%;
-    height: 70%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .picture img {
-    height: 110%;
+    height: 70%;
     width: 100%;
     object-fit: cover;
     object-position: center;
     border: 1px solid gray;
     border-radius: 10px;
-}
-.picture img:hover {
     cursor: zoom-in;
+}
+
+.picture-small {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture-small img {
+    width: 30%;
+    object-fit: cover;
+    object-position: center;
+    height: 80%;
+    margin: 0 .5rem;
+    border-radius: 0px;
+    cursor: default;
 }
 .content {
     width: 100%;

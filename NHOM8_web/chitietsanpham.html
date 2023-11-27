@@ -11,61 +11,66 @@
 </head>
 
 <body>
-    <div class="background">
-        <a href="sanpham.html"><img src="IMG/logo2.jpg" alt=""></a>
-        <div class="menu">
-            <a href="product.html?Bàn-trà">Bàn Trà</a>
-            <a href="product.html?Gương">Gương</a>
-            <a href="product.html?Bàn-trang-điểm">Bàn trang điểm</a>
-            <a href="product.html?Đèn-cây">Đèn cây</a>
-            <div class="login"><a  href="login.html">Đăng nhập</a></div>
-            <a href="giohang.html"><i class='bx bx-cart-alt'></i></a>
-        </div>
-    </div>
-    <hr style="border: 2px solid black;">
-    <div class="container">
-        <div class="top">
-            <div class="picture">
-                <img src="" alt="" id="productImage">
-            </div>
-            <div class="content">
-                <h2 class="name"></h2>
-                <div class="info"></div>
-                <div class="price"></div>
-                <br>Availability: Còn hàng
-                <div class="button" onclick="them()"><a href="giohang.html">Thêm vào giỏ hàng</a></div>
+        <div class="background">
+            <a href="sanpham.html"><img src="IMG/logo2.jpg" alt=""></a>
+            <div class="menu">
+                <a href="product.html?Bàn-trà">Bàn Trà</a>
+                <a href="product.html?Gương">Gương</a>
+                <a href="product.html?Bàn-trang-điểm">Bàn trang điểm</a>
+                <a href="product.html?Đèn-cây">Đèn cây</a>
+                <div class="login"><a  href="login.html">Đăng nhập</a></div>
+                <a href="giohang.html"><i class='bx bx-cart-alt'></i></a>
             </div>
         </div>
-    </div>
-    <!--phần cuối cùng-->
-    <div class="address">
-        <div class="img-address">
-            <img src="./IMG/logo.jpg" alt="">
-            <div class="icon-address">
-                <i class='bx bxs-home'> 273 An Dương Vương,Phường 3,Q.5,Tp.HCM</i>
-                <i class='bx bxs-phone'> 0123456789</i>
-                <i class='bx bxs-envelope'> noithatvn.com</i>
-                <i class='bx bxl-facebook-square'> facebook.com/noithatvn</i>
+        <hr style="border: 2px solid black;">
+        <div class="container">
+            <div class="top">
+                <div class="picture">
+                    <img src="" alt="" id="productImage">
+                    <figure class="picture-small">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </figure>
+                </div>
+                <div class="content">
+                    <h2 class="name"></h2>
+                    <div class="info"></div>
+                    <div class="price"></div>
+                    <br>Availability: Còn hàng
+                    <div class="button" onclick="them()"><a href="giohang.html">Thêm vào giỏ hàng</a></div>
+                </div>
             </div>
         </div>
+        <!--phần cuối cùng-->
+        <div class="address">
+            <div class="img-address">
+                <img src="./IMG/logo.jpg" alt="">
+                <div class="icon-address">
+                    <i class='bx bxs-home'> 273 An Dương Vương,Phường 3,Q.5,Tp.HCM</i>
+                    <i class='bx bxs-phone'> 0123456789</i>
+                    <i class='bx bxs-envelope'> noithatvn.com</i>
+                    <i class='bx bxl-facebook-square'> facebook.com/noithatvn</i>
+                </div>
+            </div>
 
-        <div class="policy-left">
-            <ul>
-                <i class='bx bx-poll'><span style="font-weight: bolder;"> Chính sách bán hàng</span></i>
-                <li>Chính sách thanh toán</li>
-                <li>Chính sách vận chuyển</li>
-                <li>Chính sách bảo hành & đổi trả</li>
-            </ul>
+            <div class="policy-left">
+                <ul>
+                    <i class='bx bx-poll'><span style="font-weight: bolder;"> Chính sách bán hàng</span></i>
+                    <li>Chính sách thanh toán</li>
+                    <li>Chính sách vận chuyển</li>
+                    <li>Chính sách bảo hành & đổi trả</li>
+                </ul>
+            </div>
+            <div class="policy-right">
+                <ul>
+                    <i class='bx bx-support'><span style="font-weight: bolder;"> Hỗ trợ khách hàng</span></i>
+                    <li>Tại Showroom</li>
+                    <li>Trở thành nhà phân phối</li>
+                    <li>Tuyển dụng</li>
+                </ul>
+            </div>
         </div>
-        <div class="policy-right">
-            <ul>
-                <i class='bx bx-support'><span style="font-weight: bolder;"> Hỗ trợ khách hàng</span></i>
-                <li>Tại Showroom</li>
-                <li>Trở thành nhà phân phối</li>
-                <li>Tuyển dụng</li>
-            </ul>
-        </div>
-    </div>
 
     <script src="javascripts/data.js"></script>
     
@@ -209,6 +214,32 @@
                 hinh.style.objectPosition = 'center center'; // Reset to the center position or any other default position you want
             });
 
+            var anh1 = document.getElementsByClassName('picture-small')[0];
+            if (anh1) {
+                var img1 = anh1.getElementsByTagName('img')[0];
+                if (img1) {
+                    img1.src = sanPhamHienTai.img1;
+                    console.log(sanPhamHienTai.img1);
+                }
+            }
+
+            var anh2 = document.getElementsByClassName('picture-small')[0];
+            if (anh2) {
+                var img2 = anh2.getElementsByTagName('img')[1];
+                if (img2) {
+                    img2.src = sanPhamHienTai.img2;
+                    console.log(sanPhamHienTai.img2);
+                }
+            }
+
+            var anh3 = document.getElementsByClassName('picture-small')[0];
+            if (anh3) {
+                var img3 = anh3.getElementsByTagName('img')[2];
+                if (img3) {
+                    img3.src = sanPhamHienTai.img3;
+                    console.log(sanPhamHienTai.img3);
+                }
+            }
         } phanTich_URL_chiTietSanPham();
 
     </script>
