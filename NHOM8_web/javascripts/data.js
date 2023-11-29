@@ -391,7 +391,6 @@ var list_products =
     "company": "Bàn trà",
     "companysearch": "B%C3%A0n tr%C3%A0",
     "img": "IMG/Ban_tra_BT21.jpg",
-    "img": "IMG/Ban_tra_BT18.jpg",
     "img1":"IMG/screenshot_1699523001.png",
     "img2":"IMG/screenshot_1699523019.png",
     "img3":"IMG/screenshot_1699523029.png",
