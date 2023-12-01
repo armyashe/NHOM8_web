@@ -835,7 +835,6 @@ function swap(arr, i, j) {
 function setListProducts(newList) {
     window.localStorage.setItem('ListProducts', JSON.stringify(newList));
 }
-
 function getListProducts() {
     return JSON.parse(window.localStorage.getItem('ListProducts'));
 }

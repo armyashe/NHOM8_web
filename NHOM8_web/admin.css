@@ -449,7 +449,6 @@ input:checked+.slider:before {
 ::-webkit-scrollbar-thumb {
     background: #999;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: #bbb;
 }
