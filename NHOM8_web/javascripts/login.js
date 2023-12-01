@@ -200,7 +200,6 @@ function getListProducts() {
 function getListAdmin() {
     return JSON.parse(window.localStorage.getItem('ListAdmin'));
 }
-
 function setListAdmin(l) {
     window.localStorage.setItem('ListAdmin', JSON.stringify(l));
 }
