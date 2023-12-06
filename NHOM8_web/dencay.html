@@ -26,38 +26,25 @@
     <h1 style="margin-top: 3rem;">Sắm đồ trang trí phòng ở đây nè!</h1>
     <div class="body">
         <div class="left">
-            <div class="search">
-                <div class="list">
-                    <input type="text" id="menu-search" placeholder="Nhập từ cần tìm kiếm" name="menu-search"
-                        oninput="search()">
-                    <ul class="menu-list">
-                        <li class="menu-item"><a href="dencay.html">Đèn cây</a></li>
-                        <li class="menu-item"><a href="bantra.html">Bàn Trà</a></li>
-                        <li class="menu-item"><a href="guong.html">Gương</a></li>
-                        <li class="menu-item"><a href="bantrangdiem.html">Bàn Trang Điểm</a></li>
-                    </ul>
+            <h2>Bộ lọc</h2>
+            <form action="search.html" method="get" onsubmit="return validateForm()">
+               Tên sản phẩm : <input type="text" id="menu-search" placeholder="Nhập tên sản phẩm cần tìm" name="menu-search"
+                    style="margin-top:2%;padding: 10px;">
+                <div>
+                    <label for="brand">Sản phẩm : </label>
+                    <select id="brand" style="padding: 10px 0;margin-left: 9%;margin-top: 5px;">
+                        <option value="ban-trang-diem">Bàn trang điểm</option>
+                        <option value="ban-tra">Bàn trà</option>
+                        <option value="guong">Gương</option>
+                        <option value="den-cay">Đèn cây</option>
+                    </select>
                 </div>
-                <button id="search-btn"><i class="fa fa-search" aria-hidden="true"
-                        style="color: white;margin: 4px 0 0 2px;"></i></button>
-            </div>
-            <div class="price">
-                <h2 style="margin-top: 30px;margin-left: 55px;">Lọc giá sản phẩm</h2>
-                <section name="price" class="list-price" onchange="getprice()">
-                    <input type="radio" name="price" value="0-500thousand"> 0đ — 500,000đ
-                    <br><input type="radio" name="price" value="500-1milion"> 500,000đ — 1,000,000đ
-                    <br><input type="radio" name="price" value="1-5milion"> 1,000,000đ — 5,000,000đ
-                    <br><input type="radio" name="price" value="5-7milion"> 5,000,000đ — 7,000,000đ
-                </section>
-            </div>
-            <div class="list-product">
-                <h2 style="margin-top: 30px;margin-left: 55px;">Lọc theo loại sản phẩm</h2>
-                <section name="company" id="list-company" onchange="getprice()">
-                    <input type="radio" name="company" value="Bàn Trà"> Bàn Trà
-                    <br><input type="radio" name="company" value="Gương"> Gương
-                    <br><input type="radio" name="company" value="Bàn trang điểm"> Bàn trang điểm
-                    <br><input type="radio" name="company" value="Đèn cây"> Đèn cây
-                </section>
-            </div>
+                Giá từ : <input type="number" id="priceFrom" style="margin-left: 18.2%;">
+                Đến khoảng : <input type="number" id="priceTo" style="margin-left: 3.8%;">
+                <button id="search-btn" >
+                    <h3 style="color: white;">Tìm kiếm</h3>
+                </button>
+            </form>
         </div>
         <div class="right">
             <div id="root">
@@ -199,5 +186,19 @@
         </div>
     </div>
 </body>
+<script>
+    function validateForm() {
+        var menuSearch = document.getElementById("menu-search").value;
+        var brand = document.getElementById("brand").value;
+        var priceFrom = document.getElementById("priceFrom").value;
+        var priceTo = document.getElementById("priceTo").value;
 
+        if (menuSearch === "" || brand === "" || priceFrom === "" || priceTo === "") {
+            alert("Vui lòng điền đầy đủ thông tin.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
 </html>

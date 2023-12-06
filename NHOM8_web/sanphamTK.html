@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>SẢN PHẨM</title>
     <style>
-        .menu a
-        {
+        .menu a {
             font-size: 1.4rem;
         }
     </style>
@@ -23,7 +22,13 @@
             <a href="guongTK.html">Gương</a>
             <a href="bantrangdiemTK.html">Bàn trang điểm</a>
             <a href="dencayTK.html">Đèn cây</a>
-            <a><i class="fa fa-user"></i>Nhóm 8</a>
+            <div class="login">
+                <a><i class="fa fa-user"></i>Nhóm 8</a>
+                <div class="member hide">
+                    <a href="history.html">Lịch sử đơn hàng</a>
+                </div>
+            </div>
+
             <a href="sanpham.html">Đăng xuất</a>
             <a href="giohang.html"><i class="fa fa-shopping-cart"></i><span>Giỏ hàng</span></a>
         </div>
@@ -34,8 +39,8 @@
         <div class="left">
             <h2>Bộ lọc</h2>
             <form action="searchTK.html" method="get" onsubmit="return validateForm()">
-               Tên sản phẩm : <input type="text" id="menu-search" placeholder="Nhập tên sản phẩm cần tìm" name="menu-search"
-                    style="margin-top:2%;padding: 10px;">
+                Tên sản phẩm : <input type="text" id="menu-search" placeholder="Nhập tên sản phẩm cần tìm"
+                    name="menu-search" style="margin-top:2%;padding: 10px;">
                 <div>
                     <label for="brand">Sản phẩm : </label>
                     <select id="brand" style="padding: 10px 0;margin-left: 9%;margin-top: 5px;">
@@ -47,7 +52,7 @@
                 </div>
                 Giá từ : <input type="number" id="priceFrom" style="margin-left: 18.2%;">
                 Đến khoảng : <input type="number" id="priceTo" style="margin-left: 3.8%;">
-                <button id="search-btn" >
+                <button id="search-btn">
                     <h3 style="color: white;">Tìm kiếm</h3>
                 </button>
             </form>
@@ -206,4 +211,5 @@
         return true;
     }
 </script>
+
 </html>
