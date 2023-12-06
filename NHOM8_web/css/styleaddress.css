@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 85.6vh;
+}
+
+.header {
+    height: 10%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    background: rgba(250, 247, 242, 0.696);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header img {
+    max-height: 42px;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    font-size: 35px;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+
+.menu a {
+
+    font-size: 1.4rem;
+    color: black;
+    cursor: pointer;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+.menu i:hover  {
+    border: 1px solid #fff;
+    background-color: orange;
+    color: #fff;
+}
+.menu i { /* icon */
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+.menu .fa-user {
+    padding: 10px 12.5px;
+}
+.menu .fa-shopping-cart {
+    padding: 10px 11px;
+}
+.menu a:hover {
+    color: orange;
+}
+/*main*/
+main{
+	display: flex;
+	margin: 20px auto;
+	width: 90%;
+	padding: 12px;
+    margin-top: 10%;
+}
+
+main i{
+	padding: 0 10px;
+}
+/*aside*/
+aside{
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	padding-left: 20px;
+	font-size: 18px;
+}
+
+aside a{
+	text-decoration: none;
+	margin-bottom: 20px;
+	color: black;
+}
+
+aside .active{
+	color: red;
+}
+
+aside .link:hover{
+	color: blue;
+}
+
+/*section*/
+section{
+	width: 80%;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+.product img{
+	width: 100px;
+	height: 70px;
+}
+.product{
+	display: flex;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin-bottom: 20px;
+	padding: 10px 0 10px 20px;
+	border-radius: 4px;
+}
+
+.product .info{
+	margin-left: 20px;
+}
+
+.product .name{
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.product .confirm{
+	margin-left: 276px;
+	color: green;
+}
+.input-field {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.input-field label {
+    display: block;
+    font-weight: 590;
+}
+
+.input-field input {
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.address{
+    display: flex;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin-bottom: 20px;
+	padding: 10px 0 10px 20px;
+	border-radius: 4px;
+}
+
+.address .detail{
+    margin-left: 20px;
+}
+
+.address .default{
+    margin-left: 30px;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.8px solid red;
+    border-radius: 3px;
+    color: red;
+}
+.add{
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+a:hover{
+    color: blue;
+}
+
+button{
+	display: block;
+    width: 20%;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px 10px;
+	border: 2px solid black;
+    background-color: #FFC801;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+	color: #333;
+}
+
+.addresss {
+    background-color: rgb(38, 38, 38);
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    margin-top: 10%;
+}
+
+.img-address {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.img-address img {
+    height: 250px;
+    width: 70%;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.icon-address {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.icon-address i {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.policy-left {
+    width: 80%;
+    height: 100px;
+    margin-top: 20%;
+    margin-left: 9rem;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.policy-right {
+    width: 80%;
+    height: 100px;
+    margin-top: 20%;
+    margin-left: 6rem;
+    font-size: 22px;
+    line-height: 40px;
+}

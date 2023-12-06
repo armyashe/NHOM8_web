@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maxium-scale=1" />
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Người dùng - Admin</title>
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle" style="display: none;">
+    <div class="sidebar">
+        <div class="sidebar-brand" style="padding-left: 1.5rem;">
+            <h2><span>INTERDIOR</span></h2>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="loginAdmin.html"><span class="las la-igloo"></span>
+                        <span>Bảng điều khiển</span></a>
+                </li>
+                <li>
+                    <a href="userAdmin.html" class="active"><span class="las la-users"></span>
+                        <span>Người dùng</span></a>
+                </li>
+                <li>
+                    <a href="orderAdmin.html" ><span class="las la-shopping-bag"></span>
+                        <span>Đơn hàng</span></a>
+                </li>
+                <li>
+                    <a href="productAdmin.html" ><span class="las la-shopping-bag"></span>
+                        <span>Sản phẩm</span></a>
+                </li>
+                <li>
+                    <a href="thongkeAdmin.html"><span class="fa fa-bar-chart" aria-hidden="true"></span>
+                    <span>Thống kê</span></a>
+                </li>
+                <li>
+                    <a href="../sanpham.html"><span class="fa fa-power-off" aria-hidden="true"></span>
+                        <span>Đăng xuất</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                Người dùng
+            </h2>
+
+
+            <div class="search-wrapper">
+                <input type="search" placeholder="Nhập tên sản phẩm">
+                <a href="productAdmin.html"><span class="las la-search"></span></a> 
+            </div>
+
+            <div class="dropdown">
+                <span>
+                    <div class="user-wrapper">
+                        <img src="../IMG/AD1.jpg" width="40px" height="40px" alt="">Thanh
+                    </div>
+
+                </span>
+            </div>
+        </header>
+
+        <main>
+            <div class="cards">
+                <table class="table-header">
+                    <tr>
+                        <!-- Theo độ rộng của table content -->
+                        <th title="Sắp xếp" style="width: 5%">Stt <i class="fa fa-sort"></i></th>
+                        <th title="Sắp xếp" style="width: 20%">Email <i class="fa fa-sort"></i></th>
+                        <th title="Sắp xếp" style="width: 40%">Tài khoản<i class="fa fa-sort"></i></th>
+                        <th title="Sắp xếp" style="width: 15%">Mật khẩu <i class="fa fa-sort"></i></th>
+                        <th style="width: 15%">Hành động</th>
+                    </tr>
+                </table>
+                <div class="table-content">
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 5%">1</td>
+                            <td style="width: 20%">anguyenhust@gmail.com</td>
+                            <td style="width: 40%">Nguyen An</td>
+                            <td style="width: 15%">an001</td>
+                            <td style="width: 15%">
+                                <div class="tooltip">
+                                    <label class="switch">
+                                        <input type="checkbox" onclick="toggleAccountLock()" >
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="tooltiptext" id="lockStatusText">Khóa</span>
+                                </div>
+                                <div class="tooltip" onclick="confirmDelete();">
+                                    <i class="fa fa-remove" style="font-size: 20px;"></i>
+                                    <span class="tooltiptext">Xóa</span>
+                                </div>
+                                <div class="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';">
+                                    <i class="fa fa-wrench"style="font-size: 20px;"></i>
+                                    <span class="tooltiptext">Sửa</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 5%">2</td>
+                            <td style="width: 20%">nam241004@gmail.com</td>
+                            <td style="width: 40%">Thành Nam</td>
+                            <td style="width: 15%">nam002</td>
+                            <td style="width: 15%">
+                                <div class="tooltip">
+                                    <label class="switch">
+                                        <input type="checkbox" onclick="toggleAccountLock()" >
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="tooltiptext" id="lockStatusText">Khóa</span>
+                                </div>
+                                <div class="tooltip" onclick="confirmDelete();">
+                                    <i class="fa fa-remove" style="font-size: 20px;"></i>
+                                    <span class="tooltiptext">Xóa</span>
+                                </div>
+                                <div class="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';">
+                                    <i class="fa fa-wrench"style="font-size: 20px;"></i>
+                                    <span class="tooltiptext">Sửa</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 5%">3</td>
+                            <td style="width: 20%">hangnk04@gmail.com</td>
+                            <td style="width: 40%">Ngọc Hằng</td>
+                            <td style="width: 15%">hang003</td>
+                            <td style="width: 15%">
+                                <div class="tooltip" onclick="confirmDelete();">
+                                    <label class="switch">
+                                        <input type="checkbox" onclick="toggleAccountLock()" >
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="tooltiptext" id="lockStatusText">Khóa</span>
+                                </div>
+                                <div class="tooltip" onclick="confirmDelete();">
+                                    <i class="fa fa-remove" style="font-size: 20px;"></i>
+                                    <span class="tooltiptext">Xóa</span>
+                                </div>
+                                <div class="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';">
+                                    <i class="fa fa-wrench"style="font-size: 20px;"></i>
+                                    <span class="tooltiptext">Sửa</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 5%">4</td>
+                            <td style="width: 20%">tntung1211@gmail.com</td>
+                            <td style="width: 40%">Thanh Tùng</td>
+                            <td style="width: 15%">tung007</td>
+                            <td style="width: 15%">
+                                <div class="tooltip">
+                                    <label class="switch">
+                                        <input type="checkbox" onclick="toggleAccountLock()" >
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="tooltiptext" id="lockStatusText">Khóa</span>
+                                </div>
+                                <div class="tooltip" onclick="confirmDelete();">
+                                    <i class="fa fa-remove" style="font-size: 20px;"></i>
+                                    <span class="tooltiptext">Xóa</span>
+                                </div>
+                                <div class="tooltip" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';">
+                                    <i class="fa fa-wrench" style="font-size: 20px;"></i>
+                                    <span class="tooltiptext">Sửa</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 5%">5</td>
+                            <td style="width: 20%">hihoa0302@gmail.com</td>
+                            <td style="width: 40%">Thái Hòa</td>
+                            <td style="width: 15%">hoa006</td>
+                            <td style="width: 15%">
+                                <div class="tooltip">
+                                    <label class="switch">
+                                        <input type="checkbox" onclick="toggleAccountLock()" >
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span class="tooltiptext" id="lockStatusText">Khóa</span>
+                                </div>
+                                <div class="tooltip" onclick="confirmDelete();">
+                                    <i class="fa fa-remove" style="font-size: 20px;"></i>
+                                    <span class="tooltiptext">Xóa</span>
+                                </div>
+                                <div class="tooltip" >
+                                    <i class="fa fa-wrench"style="font-size: 20px;" onclick="document.getElementById('khungSuaSanPham').style.transform = 'scale(1)';"></i>
+                                    <span class="tooltiptext">Sửa</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="table-footer">
+                <button onclick="document.getElementById('khungThemSanPham').style.transform = 'scale(1)';">
+                    <i class="fa fa-plus-square"></i>
+                    Thêm người dùng
+                </button>
+            </div>
+            <div id="khungThemSanPham" class="overlay">
+                <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">&times;</span>
+                <table class="overlayTable table-outline table-content table-header">
+                    <tr>
+                        <th colspan="2">Thêm người dùng</th>
+                    </tr>
+                    <tr>
+                        <td>Loại người dùng :</td>
+                        <td><input type="text" id="maspThem"></td>
+                    </tr>
+                    <tr>
+                        <td>Tên : </td>
+                        <td><input type="text" id="tenThem"></td>
+                    </tr>
+                    <tr>
+                        <td>Email : </td>
+                        <td><input type="text" id="emailThem"></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu : </td>
+                        <td><input type="text" id="matkhauThem"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="table-footer"> 
+                            <button onclick="addUser()">THÊM</button>
+                            <div id="successMessage" style="display: none; color: greenyellow;">Thêm người dùng thành công</div>
+                            <div id="errorMessage" style="display: none; color: red;">Vui lòng điền đầy đủ thông tin</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="khungSuaSanPham" class="overlay">
+                <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">&times;</span>
+                <table class="overlayTable table-outline table-content table-header">
+                    <tr>
+                        <th colspan="2">Sửa người dùng</th>
+                    </tr>
+                    <tr>
+                        <td>Loại người dùng :</td>
+                        <td><input type="text" id="maspSua"></td>
+                    </tr>
+                    <tr>
+                        <td>Tên : </td>
+                        <td><input type="text" id="tenSua"></td>
+                    </tr>
+                    <tr>
+                        <td>Email : </td>
+                        <td><input type="text" id="emailSua"></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu : </td>
+                        <td><input type="text" id="matkhauSua"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="table-footer"> 
+                            <button onclick="exitUser()">Sửa</button>
+                            <div id="successMessageExit" style="display: none; color: greenyellow;">Sửa người dùng thành công</div>
+                            <div id="errorMessageExit" style="display: none; color: red;">Vui lòng điền đầy đủ thông tin</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>    
+    </main>
+
+    
+</body>
+<script>
+    let accountLocked = true;
+    function toggleAccountLock() {
+        if (accountLocked) {
+            // Unlock the account
+            lockStatusText.textContent = "Mở";
+            alert("Mở khóa tài khoản thành công");
+            
+        } else {
+            // Lock the account
+            lockStatusText.textContent = "Khóa";
+            alert("Khóa tài khoản thành công");
+        }
+
+        // Toggle the account lock status
+        accountLocked = !accountLocked;
+    }
+    function addUser() {
+        // Lấy giá trị từ các trường nhập
+        var maspValue = document.getElementById('maspThem').value;
+        var tenValue = document.getElementById('tenThem').value;
+        var emailValue = document.getElementById('emailThem').value;
+        var matkhauValue = document.getElementById('matkhauThem').value;
+
+        // Kiểm tra xem tất cả các trường bắt buộc có được điền đầy đủ hay không
+        if (maspValue && tenValue && emailValue) {
+            document.getElementById('errorMessage').style.display = 'none'; // Ẩn thông báo lỗi nếu thành công
+            document.getElementById('successMessage').style.display = 'block';// Hiển thị thông báo thành công
+            
+        } else {
+            // Hiển thị thông báo lỗi nếu không điền đủ thông tin
+            document.getElementById('errorMessage').style.display = 'block';
+
+            // Ẩn thông báo thành công nếu có
+            document.getElementById('successMessage').style.display = 'none';
+        }
+    }
+    function exitUser() {
+        // Lấy giá trị từ các trường nhập
+        var maspValue = document.getElementById('maspSua').value;
+        var tenValue = document.getElementById('tenSua').value;
+        var emailValue = document.getElementById('emailSua').value;
+        var matkhauValue = document.getElementById('matkhauSua').value;
+
+        // Kiểm tra xem tất cả các trường bắt buộc có được điền đầy đủ hay không
+        if (maspValue && tenValue && emailValue) {
+            document.getElementById('errorMessageExit').style.display = 'none'; // Ẩn thông báo lỗi nếu thành công
+            document.getElementById('successMessageExit').style.display = 'block';// Hiển thị thông báo thành công
+            
+        } else {
+            // Hiển thị thông báo lỗi nếu không điền đủ thông tin
+            document.getElementById('errorMessageExit').style.display = 'block';
+
+            // Ẩn thông báo thành công nếu có
+            document.getElementById('successMessageExit').style.display = 'none';
+        }
+    }
+
+    function confirmDelete() {
+        var isConfirmed = confirm("Bạn có chắc chắn muốn xóa ???");
+        if (isConfirmed) {
+            alert("Xóa thành công");
+        }
+    }
+</script>
+</html>

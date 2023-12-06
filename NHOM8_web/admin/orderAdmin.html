@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maxium-scale=1" />
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Đơn hàng - Admin</title>
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle" style="display: none;">
+    <div class="sidebar">
+        <div class="sidebar-brand" style="padding-left: 1.5rem;">
+            <h2><span>INTERDIOR</span></h2>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="loginAdmin.html"><span class="las la-igloo"></span>
+                        <span>Bảng điều khiển</span></a>
+                </li>
+                <li>
+                    <a href="userAdmin.html"><span class="las la-users"></span>
+                        <span>Người dùng</span></a>
+                </li>
+                <li>
+                    <a href="orderAdmin.html" class="active"><span class="las la-shopping-bag"></span>
+                        <span>Đơn hàng</span></a>
+                </li>
+                <li>
+                    <a href="productAdmin.html"><span class="las la-shopping-bag"></span>
+                        <span>Sản phẩm</span></a>
+                </li>
+                <li>
+                    <a href="thongkeAdmin.html"><span class="fa fa-bar-chart" aria-hidden="true"></span>
+                    <span>Thống kê</span></a>
+                </li>
+                <li>
+                    <a href="../sanpham.html"><span class="fa fa-power-off" aria-hidden="true"></span>
+                        <span>Đăng xuất</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                Đơn hàng
+            </h2>
+
+
+            <div class="search-wrapper">
+                <input type="search" placeholder="Nhập tên sản phẩm">
+                <a href="productAdmin.html"><span class="las la-search"></span></a>
+            </div>
+
+            <div class="dropdown">
+                <span>
+                    <div class="user-wrapper">
+                        <img src="../IMG/AD1.jpg" width="40px" height="40px" alt="">Thanh
+                    </div>
+
+                </span>
+            </div>
+        </header>
+
+        <main>
+            <div class="cards">
+                <table class="table-header">
+                    <tr>
+                        <!-- Theo độ rộng của table content -->
+                        <th title="Sắp xếp" style="width: 5%">Stt <i class="fa fa-sort"></i></th>
+                        <th title="Sắp xếp" style="width: 8%">Khách <i class="fa fa-sort"></i></th>
+                        <th title="Sắp xếp" style="width: 20%">Sản phẩm <i class="fa fa-sort"></i></th>
+                        <th title="Sắp xếp" style="width: 15%">Tổng tiền <i class="fa fa-sort"></i></th>
+                        <th title="Sắp xếp" style="width: 20%">Địa chỉ <i class="fa fa-sort"></i></th>
+                        <th title="Sắp xếp" style="width: 10%">Ngày giờ <i class="fa fa-sort"></i></th>
+                        <th title="Sắp xếp" style="width: 13%">Trạng thái<i class="fa fa-sort"></i></th>
+                    </tr>
+                </table>
+                <div class="table-content">
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 6%">1</td>
+                            <td style="width: 8%">Ms Lộ Tư</td>
+                            <td style="width: 22%">
+                                <a title="Xem chi tiết" target="_blank" href="../chitietsanphambantrangdiemTK.html">Bàn
+                                    trang điểm TC22</a>
+                                <img src="../IMG/Ban_trang_diem_TC22.jpg"></img>
+                            </td>
+                            <td style="width: 17%">799.000₫</td>
+                            <td style="width: 22%">221 Lê Hồng Phong, Quận 10, TpHCM</td>
+                            <td>03/12/2023</td>
+                            <td style="width: 14%">Đã nhận</td>
+                        </tr>
+                    </table>
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 6%">2</td>
+                            <td style="width: 9%">Park Jihoon</td>
+                            <td style="width: 22%">
+                                <a title="Xem chi tiết" target="_blank" href="../chitietsanphambantraTK.html">Bàn trà
+                                    Tab BPT10 </a>
+                                <img src="../IMG/Ban_Tab_BPT10.jpg"></img>
+                            </td>
+                            <td style="width: 17%">2.899.000₫</td>
+                            <td style="width: 22%">Võ Văn Hát, P.Long Trường, Thủ Đức, TpHCM</td>
+                            <td>14/11/2023</td>
+                            <td style="width: 14%">Đã nhận</td>
+                        </tr>
+                    </table>
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 6%">3</td>
+                            <td style="width: 8%">Thiên Hân</td>
+                            <td style="width: 22%">
+                                <a title="Xem chi tiết" target="_blank" href="../chitietsanphamdencayTK.html">Đèn cây
+                                    DC07</a>
+                                <img src="../IMG/Den_cay_DC07.jpg"></img>
+                            </td>
+                            <td style="width: 17%">490.000₫</td>
+                            <td style="width: 22%">Nguyễn Văn Bá, Thủ Đức TpHCM</td>
+                            <td>26/10/2023</td>
+                            <td style="width: 14%">Chưa xử lý</td>
+                        </tr>
+                    </table>
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 6%">4</td>
+                            <td style="width: 8%">Loan</td>
+                            <td style="width: 22%">
+                                <a title="Xem chi tiết" target="_blank" href="../chitietsanphamguongTK.html">Gương trang
+                                    trí treo tường GTT05</a>
+                                <img src="../IMG/Guong_trang_tri_GTT05.jpg"></img>
+                            </td>
+                            <td style="width: 17%">800.000₫</td>
+                            <td style="width: 22%">Hồ Văn Tắng, Tân Phú Trung, Củ Chi, TpHCM</td>
+                            <td>21/02/2023</td>
+                            <td style="width: 14%">Chưa xử lý</td>
+                        </tr>
+                    </table>
+
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 6%">5</td>
+                            <td style="width: 8%">Dũng</td>
+                            <td style="width: 22%">
+                                <a title="Xem chi tiết" target="_blank" href="../chitietsanphamdencayTK.html">Bàn trang
+                                    điểm TC23</a>
+                                <img src="../IMG/Ban_trang_diem_TC23.jpg"></img>
+                            </td>
+                            <td style="width: 17%">490.000₫</td>
+                            <td style="width: 22%">Nguyễn Văn Bá, Thủ Đức TpHCM</td>
+                            <td>26/10/2023</td>
+                            <td style="width: 14%">Đã nhận</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="table-footer">
+                <div class="timTheoNgay">
+                    Từ ngày: <input type="date" id="fromDate">
+                    Đến ngày: <input type="date" id="toDate">
+
+                    <a href="orderAdmin.html"><button><i class="fa fa-search"></i>Tìm</button></a>
+                </div>
+                <div class="timtheodon" style="margin-top: 2%;">
+                    <select name="kieuTimDonHang">
+                        <option value="ma">Tìm theo mã đơn</option>
+                        <option value="khachhang">Tìm theo tên khách hàng</option>
+                        <option value="trangThai">Tìm theo trạng thái</option>
+                    </select>
+                    <input type="text" placeholder="Tìm kiếm..."><a href="orderAdmin.html"><button style="margin-left: 4px;"><i class="fa fa-search"></i>Tìm</button></a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

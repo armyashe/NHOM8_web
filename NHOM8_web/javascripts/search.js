@@ -1,15 +1,42 @@
+
+  
 const categories = [...new Set(list_products.map((item) => { return item }))] // khai báo mảng với tên là categories sẽ là danh sách mục duy nhất từ mảng list_products
 
 // dùng để tìm kiếm các sản phẩm trên thanh tìm kiếm 
-document.getElementById('menu-search').addEventListener('keyup', (e) => { // nhập từ tìm kiếm trên thanh tìm kiếm thì nó sẽ lọc danh sách dựa trên giá trị tìm kiếm . Sau đó nó sẽ hiện thị sản phẩm theo giá trị tìm kiếm trên trang hiện tại
-    const searchData = e.target.value.toLowerCase();// sử dụng để so sánh không phân biệt chữ hoa và chữ thường.
+function searchfunc() {
+    const searchData = document.getElementById('menu-search').value.toLowerCase();// sử dụng để so sánh không phân biệt chữ hoa và chữ thường.
     filteredData = categories.filter((item) => {
         return (
-            item.name.toLowerCase().includes(searchData) 
+            item.name.toLowerCase().includes(searchData) // nếu tên sản phẩm chứa giá trị tìm kiếm thì nó sẽ trả về true và ngược lại
         );
     });
-    displayProductsOnPage(currentPage)
-});
+    if (filteredData.length === 0) {
+        // Nếu không tìm thấy sản phẩm, hiển thị thông báo "Không tìm thấy sản phẩm"
+        document.getElementById('root').innerHTML = '<p>Không tìm thấy sản phẩm</p>';
+    } else {
+        // Nếu tìm thấy sản phẩm, hiển thị sản phẩm lọc được
+        displayItem(filteredData);
+    }
+}
+function search() {
+    const searchData = document.getElementById('menu-search').value.toLowerCase();
+    const menuItems = document.querySelectorAll('.menu-list .menu-item');
+
+    // Lặp qua từng phần tử trong danh sách menu
+    menuItems.forEach((menuItem) => {
+        const menuItemText = menuItem.innerText.toLowerCase();
+
+        // Kiểm tra xem có sự xuất hiện của giá trị tìm kiếm trong văn bản của mục menu hay không
+        if (menuItemText.includes(searchData)) {
+            // Nếu tìm thấy, hiển thị mục menu đó
+            menuItem.style.display = 'list-item';
+        } else {
+            // Nếu không tìm thấy, ẩn mục menu đó
+            menuItem.style.display = 'none';
+        }
+    });
+}
+
 // hàm này dùng để tìm kiếm hai phần lọc theo giá và lọc theo sản phẩm 
 function getprice() {
     const selectedInputprice = document.querySelector('input[name="price"]:checked');
@@ -49,6 +76,13 @@ function getprice() {
                 });
                 console.log(filteredData)
                 displayProductsOnPage(currentPage)
+            }
+            if (filteredData.length === 0) {
+                // Nếu không có sản phẩm phù hợp, hiển thị thông báo
+                document.getElementById('root').innerHTML = "<p>Không có sản phẩm phù hợp</p>";
+            } else {
+                // Nếu có sản phẩm, hiển thị sản phẩm
+                displayItem(filteredData);
             }
 }
 

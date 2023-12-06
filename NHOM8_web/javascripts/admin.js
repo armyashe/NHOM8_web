@@ -12,11 +12,8 @@ window.onload = function () {
         addTableDonHang();
         addTableKhachHang();
         addThongKe();
-
         openTab('Trang Chủ')
-    } else {
-        document.body.innerHTML = `<h1 style="color:red; with:100%; text-align:center; margin: 50px;"> Truy cập bị từ chối.. </h1>`;
-    }
+    } 
 }
 
 function logOutAdmin() {

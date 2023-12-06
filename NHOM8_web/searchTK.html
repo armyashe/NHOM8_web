@@ -13,13 +13,13 @@
     <div class="background">
         <a href="sanpham.html"><img src="IMG/logo2.jpg" alt=""></a>
         <div class="menu">
-            <a href="bantra.html">Bàn Trà</a>
-            <a href="guong.html">Gương</a>
-            <a href="bantrangdiem.html">Bàn trang điểm</a>
-            <a href="dencay.html">Đèn cây</a>
-            <a href="login.html"><i class="fa fa-user"></i>Đăng nhập</a>
-            <a href="" onclick="alert('Bạn chưa đăng nhập')"><i class="fa fa-shopping-cart"></i><span>Giỏ
-                    hàng</span></a>
+            <a href="bantraTK.html">Bàn Trà</a>
+            <a href="guongTK.html">Gương</a>
+            <a href="bantrangdiemTK.html">Bàn trang điểm</a>
+            <a href="dencayTK.html">Đèn cây</a>
+            <a><i class="fa fa-user"></i>Nhóm 8</a>
+            <a href="sanpham.html">Đăng xuất</a>
+            <a href="giohang.html"><i class="fa fa-shopping-cart"></i><span>Giỏ hàng</span></a>
         </div>
 
 
@@ -27,31 +27,44 @@
     <hr style="border: 2px solid black;">
     <h1 style="margin-top: 3rem;">Sắm đồ trang trí phòng ở đây nè!</h1>
     <div class="body">
-        <div class="left">
-            <h2>Bộ lọc</h2>
-            <form action="search.html" method="get" onsubmit="return validateForm()">
-               Tên sản phẩm : <input type="text" id="menu-search" placeholder="Nhập tên sản phẩm cần tìm" name="menu-search"
-                    style="margin-top:2%;padding: 10px;">
-                <div>
-                    <label for="brand">Sản phẩm : </label>
-                    <select id="brand" style="padding: 10px 0;margin-left: 9%;margin-top: 5px;">
-                        <option value="ban-trang-diem">Bàn trang điểm</option>
-                        <option value="ban-tra">Bàn trà</option>
-                        <option value="guong">Gương</option>
-                        <option value="den-cay">Đèn cây</option>
-                    </select>
-                </div>
-                Giá từ : <input type="number" id="priceFrom" style="margin-left: 18.2%;">
-                Đến khoảng : <input type="number" id="priceTo" style="margin-left: 3.8%;">
-                <button id="search-btn" >
+        <div class="body-body" style="width: 30%;">
+            <div class="middle" style="text-align: center;font-size: 25px;color: red;">Tìm thấy 20 kết quả :</div>
+            <div class="left" style="margin-left: 32px;width: 86%;margin-top: 17px;">
+                <h2>Bộ lọc</h2>
+                <form action="searchTK.html">
+                    <div style="padding: 20px 0;">
+                        <label for="name">Tên sản phẩm : </label>
+                        <input type="text" id="menu-search" placeholder="Nhập tên sản phẩm cần tìm" name="menu-search"
+                            style="margin-top:2%;padding: 10px;">
+                    </div>
+                    <div>
+                        <label for="brand">Sản phẩm : </label>
+                        <select id="brand" style="padding: 10px 0;margin-left: 9%;">
+                            <option value="ban-trang-diem">Bàn trang điểm</option>
+                            <option value="ban-tra">Bàn trà</option>
+                            <option value="guong">Gương</option>
+                            <option value="den-cay">Đèn cây</option>
+                        </select>
+                    </div>
+                    <div style="margin-top: 5%;">
+                        <label for="priceFrom">Giá từ : </label>
+                        <input type="number" id="priceFrom" style="margin-left: 18%;">
+                        <br><label for="priceFrom">Đến khoảng : </label>
+                        <input type="number" id="priceTo" style="margin-left: 7px;">
+                    </div>
+                </form>
+                <button id="search-btn">
                     <h3 style="color: white;">Tìm kiếm</h3>
                 </button>
-            </form>
+            </div>
+            
         </div>
+
+
         <div class="right">
             <div id="root">
                 <div class="box">
-                    <a href="chitietsanphambantrangdiem.html">
+                    <a href="chitietsanphambantrangdiemTK.html">
                         <div class='img-box'>
                             <img class='images' src="IMG/Ban_trang_diem_TC22.jpg"></img>
                         </div>
@@ -62,7 +75,7 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="chitietsanphambantrangdiem.html">
+                    <a href="chitietsanphambantrangdiemTK.html">
                         <div class='img-box'>
                             <img class='images' src="IMG/Ban_Trang_Điem_TC56.jpg"></img>
                         </div>
@@ -73,7 +86,7 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="chitietsanphambantrangdiem.html">
+                    <a href="chitietsanphambantrangdiemTK.html">
                         <div class='img-box'>
                             <img class='images' src="IMG/Ban_trang_diem_TC17.jpg"></img>
                         </div>
@@ -84,7 +97,7 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="chitietsanphambantrangdiem.html">
+                    <a href="chitietsanphambantrangdiemTK.html">
                         <div class='img-box'>
                             <img class='images' src="IMG/Ban_trang_diem_TC23.jpg"></img>
                         </div>
@@ -95,7 +108,7 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="chitietsanphambantrangdiem.html">
+                    <a href="chitietsanphambantrangdiemTK.html">
                         <div class='img-box'>
                             <img class='images' src="IMG/Ban_trang_diem_TC10.jpg"></img>
                         </div>
@@ -106,7 +119,7 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="chitietsanphambantrangdiem.html">
+                    <a href="chitietsanphambantrangdiemTK.html">
                         <div class='img-box'>
                             <img class='images' src="IMG/Ban_trang_diem_BTD01.jpg"></img>
                         </div>
@@ -117,7 +130,7 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="chitietsanphambantrangdiem.html">
+                    <a href="chitietsanphambantrangdiemTK.html">
                         <div class='img-box'>
                             <img class='images' src="IMG/Ban_trang_điem_BTD09.jpg"></img>
                         </div>
@@ -128,7 +141,7 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="chitietsanphambantrangdiem.html">
+                    <a href="chitietsanphambantrangdiemTK.html">
                         <div class='img-box'>
                             <img class='images' src="IMG/Ban_trang_diem_BTD05.jpg"></img>
                         </div>
@@ -139,7 +152,7 @@
                     </a>
                 </div>
                 <div class="box">
-                    <a href="chitietsanphamguong.html">
+                    <a href="chitietsanphamguongTK.html">
                         <div class='img-box'>
                             <img class='images' src="IMG/Guong_trang_tri_GTT03.jpg"></img>
                         </div>
@@ -156,7 +169,7 @@
     </div>
     <div class="pagination">
         <button id="prevPage" disabled style="cursor: default;">Trước</button>
-        <a href="sanpham1.html" style="color: black;text-decoration: none;"><button id="nextPage">Sau</button></a>
+        <a href="sanpham1TK.html" style="color: black;text-decoration: none;"><button id="nextPage">Sau</button></a>
     </div>
     <div class="address">
         <div class="img-address">
@@ -187,19 +200,5 @@
         </div>
     </div>
 </body>
-<script>
-    function validateForm() {
-        var menuSearch = document.getElementById("menu-search").value;
-        var brand = document.getElementById("brand").value;
-        var priceFrom = document.getElementById("priceFrom").value;
-        var priceTo = document.getElementById("priceTo").value;
 
-        if (menuSearch === "" || brand === "" || priceFrom === "" || priceTo === "") {
-            alert("Vui lòng điền đầy đủ thông tin.");
-            return false;
-        }
-
-        return true;
-    }
-</script>
 </html>

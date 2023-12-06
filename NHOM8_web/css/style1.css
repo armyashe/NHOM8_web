@@ -20,7 +20,7 @@ body {
 
 
 .background img {
-    max-height: 50px;
+    max-height: 42px;
     overflow: hidden;
 }
 
@@ -43,7 +43,7 @@ h1 {
 
 .menu a {
 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: black;
     cursor: pointer;
     margin: 0 2rem;
@@ -52,59 +52,52 @@ h1 {
     align-items: center;
     text-decoration: none;
 }
-
+.menu i:hover  {
+    border: 1px solid #fff;
+    background-color: orange;
+    color: #fff;
+}
+.menu i { /* icon */
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+.menu .fa-user {
+    padding: 10px 12.5px;
+}
+.menu .fa-shopping-cart {
+    padding: 10px 11px;
+}
 .menu a:hover {
     color: orange;
-    border-bottom: .1rem solid orange;
-}
-.login
-{
-    font-size: 22px; 
 }
 .left {
     margin-top: 50px;
     margin-left: 50px;
-    width: 25%;
+    width: 29%;
     padding: 40px 10px;
     height: 800px;
     background-color: white;
     border: 2px solid black;
+    height: 300px;
 }
 
-.search {
-    display: flex;
-    margin-left: 3rem;
-}
 
-#menu-search {
-    padding: 10px 10px;
-    font-size: 15px;
-    background: none;
-    width: 200px;
-    outline: none;
-    /*mất viền cũ*/
-    position: relative;
-    outline: none;
-}
-
-.menu-item {
-    background-color: white;
-    border: 1px solid black;
-    text-align: center;
-    padding: 0px 25px;
-}
-
-.menu-item:hover {
-    background-color: rgb(204, 209, 166);
-}
-
-.search button {
+#search-btn {
     background-color: black;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
 }
 
 .list {
@@ -161,9 +154,14 @@ section {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2%;
+    grid-gap: 4%;
 }
-
+#root p
+{
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: blue;
+}
 .box {
     width: 100%;
     display: flex;
@@ -211,6 +209,10 @@ section {
     margin-right: 20px;
     width: 20%;
     height: 40px;
+}
+.pagination button:hover
+{
+    cursor: pointer;
 }
 .address {
     background-color: rgb(38, 38, 38);

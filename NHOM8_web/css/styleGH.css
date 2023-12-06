@@ -22,7 +22,7 @@ body {
 }
 
 .header img {
-    max-height: 50px;
+    max-height: 42px;
     overflow: hidden;
 }
 
@@ -31,29 +31,46 @@ h1 {
     color: red;
     font-size: 35px;
 }
-
 .menu {
     list-style: none;
     display: flex;
-    font-size: 25px;
+    width: 100%;
 }
 
 .menu a {
 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: black;
     cursor: pointer;
     margin: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 40px;
     text-decoration: none;
 }
-
+.menu i:hover  {
+    border: 1px solid #fff;
+    background-color: orange;
+    color: #fff;
+}
+.menu i { /* icon */
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+.menu .fa-user {
+    padding: 10px 12.5px;
+}
+.menu .fa-shopping-cart {
+    padding: 10px 11px;
+}
 .menu a:hover {
     color: orange;
-    border-bottom: .1rem solid orange;
 }
 
 
@@ -233,4 +250,56 @@ tbody tr td a:hover {
 
 .xoaHet:hover {
     background-color: rgb(224, 65, 65);
+}
+.address {
+    background-color: rgb(38, 38, 38);
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    margin-top: 10%;
+}
+
+.img-address {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.img-address img {
+    height: 250px;
+    width: 70%;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.icon-address {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.icon-address i {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.policy-left {
+    width: 80%;
+    height: 100px;
+    margin-top: 20%;
+    margin-left: 9rem;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.policy-right {
+    width: 80%;
+    height: 100px;
+    margin-top: 20%;
+    margin-left: 6rem;
+    font-size: 22px;
+    line-height: 40px;
 }

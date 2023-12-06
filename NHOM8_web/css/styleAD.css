@@ -262,7 +262,7 @@ a,a:hover {
 main {
     margin-top: 55px;
     padding: 2rem 1.5rem;
-    background-color: #f1f5f9;
+    
     min-height: calc(100vh - 90px);
 }
 
@@ -531,4 +531,123 @@ info h4 {
         grid-template-columns: 100%;
     }
 
+}
+/* ==================== table ====================== */
+.table-outline {
+    width: 100%;
+    
+}
+
+/* phần chứa header (th) */
+.table-header {
+    width: 100%;
+}
+
+.table-header th {
+    color: #e4e7ea;
+    background-color: #3e464d;
+    border-color: #23282c;
+}
+
+.table-header th {
+    cursor: pointer;
+}
+
+.table-header th i {
+    /* Ẩn icon sort */
+    transform: scale(0);
+    transition-duration: .2s;
+}
+
+.table-header th:hover i {
+    transform: scale(1)
+}
+
+.table-header th,
+.table-content td {
+    padding: .75rem 0;
+    text-align: center;
+    vertical-align: top;
+   
+}
+
+/* phần chứa nội dung  */
+.table-content {
+    min-height: 200px;
+    max-height: 550px;
+    overflow: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.table-content tr:nth-of-type(even) {
+    background-color: #3e4144;
+}
+
+.table-content td {
+    position: relative;
+    color: black;
+}
+
+/* Link chi tiet san pham */
+.table-content td a {
+    display: block;
+    color: black;
+}
+
+.table-content td a:hover {
+    text-decoration: underline;
+}
+
+/* Hành động */
+.table-content td i {
+    padding: .3em;
+    cursor: pointer;
+}
+
+.table-content td i.fa-wrench:hover {
+    color: #63c2de
+}
+
+.table-content td i.fa-trash:hover {
+    color: #f86c6b
+}
+
+.table-content td i.fa-check:hover {
+    color: #5ce457d8
+}
+
+.table-content td i.fa-remove:hover {
+    color: #f86c6b
+}
+.tooltiptext
+{
+    cursor: pointer;
+}
+.tooltiptext:hover {
+    color: #63c2de;
+}
+.tooltiptext1
+{
+    cursor: pointer;
+}
+.tooltiptext1:hover {
+    color: #f86c6b;
+}
+
+
+/* =================== Các class xử lý ảnh ================ */
+/* Ảnh ẩn trong td */
+.hideImg td img {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    height: 0;
+    border-radius: 5px;
+    transition-duration: .1s;
+    z-index: 2;
+}
+
+.hideImg td:hover img {
+    height: 150px;
 }
