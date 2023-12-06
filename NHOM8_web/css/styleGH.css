@@ -5,32 +5,36 @@
 
 body {
     width: 100%;
-    height: 85.6vh;
-}
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(250, 247, 242);
 
-.header {
+
+}
+.background {
     height: 10%;
-    padding: 20px 50px;
+    padding: 20px 0px;
     display: flex;
     align-items: center;
-    background: rgba(250, 247, 242, 0.696);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    background-color: white;
 }
 
-.header img {
+.background img {
     max-height: 42px;
     overflow: hidden;
 }
 
 h1 {
     text-align: center;
-    color: red;
-    font-size: 35px;
 }
+
+.body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 1000px;
+}
+
 .menu {
     list-style: none;
     display: flex;
@@ -72,17 +76,63 @@ h1 {
 .menu a:hover {
     color: orange;
 }
+.member {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #eee;
+    min-width: 170px;
+    transition-duration: .15s;
+    transform: translateX(-40%) scale(0);
+}
+.login
+{
+    position: relative;
+    display: table-cell;
+    font-size: 28px;
+}
+.login:hover > .member{
+    z-index: 20;
+    transform: translateX(-40%) scale(1);
+    width: max-content;
+    margin-left: 40%;
+    text-align: center;
+}
+.login .member {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #eee;
+   /*  min-width: 170px; */
+    transition-duration: .15s;
+    transform: translateX(-40%) scale(0);
+}
+.login .member a {
+    display: block;
+    padding: 10px 0;
+}
+.login .member a:hover {
+    /* background-color: #888; */
+    color: rgb(69, 216, 199);
+}
 
-
+.body_1{
+    width: 90%;
+    margin: 0 auto;  
+}
+.body_1 h3{
+    padding-top: 20px;
+}
 .row {
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-y: auto;
-    margin-top: 12%;
-    
 }
+
 
 .list-cart {
     width: 100%;
@@ -257,7 +307,7 @@ tbody tr td a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: white;
-    margin-top: 10%;
+    margin-top: 50px;
 }
 
 .img-address {
