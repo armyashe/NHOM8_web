@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleGH.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Giỏ hàng</title>
 </head>
@@ -51,9 +52,9 @@
                         <td><a target="_blank" href="chitietsanphambantraTK.html" title="Xem chi tiết">Bàn trà Tab
                                 BPT10</a></td>
                         <td class="soluong">
-                            <button><i class="fa fa-minus"></i></button>
-                            <input size="1" value=1>
-                            <button><i class="fa fa-plus"></i></button>
+                            <button class="fa fa-minus"><i ></i></button>
+                            <input class="num" size="1" value=1>
+                            <button class="fa fa-plus"><i ></i></button>
                         </td>
                         <td>2.899.000₫</td>
                         <td>2.899.000₫</td>
@@ -65,9 +66,9 @@
                         <td><a target="_blank" href="chitietsanphambantrangdiemTK.html" title="Xem chi tiết">Bàn Trang
                                 Điểm TC22</a></td>
                         <td class="soluong">
-                            <button><i class="fa fa-minus"></i></button>
-                            <input size="1" value=1>
-                            <button><i class="fa fa-plus"></i></button>
+                            <button class="fa fa-minus"><i ></i></button>
+                            <input class="num" size="1" value=1>
+                            <button class="fa fa-plus"><i ></i></button>
                         </td>
                         <td>799.000₫</td>
                         <td>799.000₫</td>
@@ -76,12 +77,13 @@
                     <tr>
                         <td>3</td>
                         <td><img src="IMG/Guong_trang_tri_GTT05.jpg" alt=""></td>
-                        <td><a target="_blank" href="chitietsanphamguongTK.html" title="Xem chi tiết">Gương trang trí treo
+                        <td><a target="_blank" href="chitietsanphamguongTK.html" title="Xem chi tiết">Gương trang trí
+                                treo
                                 tường GTT05</a></td>
                         <td class="soluong">
-                            <button><i class="fa fa-minus"></i></button>
-                            <input size="1" value=1>
-                            <button><i class="fa fa-plus"></i></button>
+                            <button class="fa fa-minus"><i ></i></button>
+                            <input class="num" size="1" value=1>
+                            <button class="fa fa-plus"><i ></i></button>
                         </td>
                         <td>800.000₫</td>
                         <td>800.000₫</td>
@@ -93,9 +95,9 @@
                         <td><a target="_blank" href="chitietsanphamdencayTK.html" title="Xem chi tiết">Đèn cây DC07</a>
                         </td>
                         <td class="soluong">
-                            <button><i class="fa fa-minus"></i></button>
-                            <input size="1" value=1>
-                            <button><i class="fa fa-plus"></i></button>
+                            <button class="fa fa-minus"><i ></i></button>
+                            <input  class="num" size="1" value=1>
+                            <button class="fa fa-plus"><i ></i></button>
                         </td>
                         <td>490.000₫</td>
                         <td>490.000₫</td>
@@ -108,11 +110,13 @@
                         <td class="xoaHet" onclick="xoahetgiohang()">
                             Xóa hết </td>
                     </tr>
-                    <tr >
+                    <tr>
                         <td colspan="9">
-                            <div style="font-size: 18px;color: red;font-weight: bolder;text-align: left;"><i class='bx bxs-map'></i>Địa Chỉ Nhận Hàng</div>
+                            <div style="font-size: 18px;color: red;font-weight: bolder;text-align: left;"><i
+                                    class='bx bxs-map'></i>Địa Chỉ Nhận Hàng</div>
                             <div style="display: flex;text-align: center;">
-                                <p style="color: black;font-size: large;padding: 5px 0;font-weight: bolder;">Ms Lộ Tư | SĐT: (+84)778 052 785 | Địa chỉ: 273 An Dương Vương,Phường 3,Q.5,Tp.HCM </p> 
+                                <p style="color: black;font-size: large;padding: 5px 0;font-weight: bolder;">Ms Lộ Tư |
+                                    SĐT: (+84)778 052 785 | Địa chỉ: 273 An Dương Vương,Phường 3,Q.5,Tp.HCM </p>
                                 <a href="address.html" style="color: blue;margin-left: 100px;">Thay đổi</a>
                             </div>
                         </td>
@@ -158,12 +162,28 @@
             alert("Hủy mua thành công !");
         }
     }
-    function xoahetgiohang() {
-        var isConfirmed = confirm("Bạn có chắc chắn muốn xóa hết sản phẩm trong giỏ hàng ?");
-        if (isConfirmed) {
-            alert("Xóa sản phẩm thành công !");
-        }
-    }
+    var plus = document.getElementsByClassName('fa-plus'),
+    minus = document.getElementsByClassName('fa-minus'),
+    num = document.getElementsByClassName('num');
+
+    for(var i=0; i<plus.length; i++){
+    var buttonPlus = plus[i];
+    var buttonMinus = minus[i];
+    buttonPlus.addEventListener('click', function(event){//thêm một bộ lắng nghe sự kiện cho sự kiện "click"
+         // Mã xử lý khi nút tăng được nhấp
+        var buttonClicked = event.target;// Nút được nhấp
+        var input = buttonClicked.parentElement.children[1];// Input liên quan (giả sử nó là anh em thứ hai)
+        input.value=parseInt(input.value)+1;// Tăng giá trị lên 1
+    })
+
+    buttonMinus.addEventListener('click', function(event){//thêm một bộ lắng nghe sự kiện cho sự kiện "click"
+        // Mã xử lý khi nút giảm được nhấp
+        var buttonClicked = event.target; // Nút được nhấp
+        var input = buttonClicked.parentElement.children[1]; // Input liên quan (giả sử nó là anh em thứ hai)
+        if(input.value>0)
+            input.value=parseInt(input.value)-1; // Giảm giá trị xuống 1
+    })
+}
 </script>
 
 
