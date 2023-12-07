@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-    --main-color: rgba(97, 182, 182, 0.534);
+    --main-color: rgba(154, 182, 97, 0.534);
     --color-dark: #1D2231;
     --text-grey: #8390A2;
 
@@ -280,6 +280,7 @@ main {
     background-color: #fff;
     padding: 2rem;
     border-radius: 2px;
+    box-shadow: 0 5px 10px rgba(154, 182, 97, 0.534);
 }
 
 .card-single div:last-child span {
