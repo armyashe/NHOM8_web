@@ -126,7 +126,7 @@ h1 {
     background-color: #842828b0;
     color: #eee;
 }
-.left {
+/* .left {
     margin-top: 50px;
     margin-left: 50px;
     width: 29%;
@@ -136,19 +136,62 @@ h1 {
     border: 2px solid black;
     height: 300px;
 }
-
-
-#search-btn {
-    background-color: black;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 5%;
-    display: flex;
+ */
+ .left {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 29%;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
 }
+
+.left h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.left form {
+    margin-top: 10px;
+}
+
+#menu-search,
+#brand,
+#priceFrom,
+#priceTo {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#brand {
+    margin-left: 0;
+}
+
+button#search-btn {
+    background-color: #293e3e;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 2px;
+}
+
+button#search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Add some styles for better responsiveness */
+@media only screen and (max-width: 768px) {
+    .left {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+
 
 .list {
     position: relative;

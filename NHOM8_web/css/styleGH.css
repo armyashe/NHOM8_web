@@ -1,19 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    
+    
 }
 
 body {
     width: 100%;
     height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: rgb(250, 247, 242);
 
 
 }
 .background {
     height: 10%;
-    padding: 15px 50px;
+    padding: 15px 10px;
     display: flex;
     align-items: center;
     background: white;
@@ -29,10 +33,7 @@ body {
     overflow: hidden;
 }
 
-.background h1 {
-    padding-top: 500px;
-    text-align: center;
-}
+
 
 .body {
     width: 100%;
@@ -130,7 +131,7 @@ body {
     padding-top: 100px;
 }
 .body_1 h3{
-    padding-top: 20px;
+    padding-top: 50px;
 }
 .row {
     width: auto;
@@ -151,12 +152,13 @@ body {
 
 .list-cart th,
 .list-cart td {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     padding: 10px;
 }
 
 .list-cart th {
-    background-color: #f0f0f0;
+    color: #fff;
+    background-color: #3e4144;
 }
 
 .list-cart td img {
@@ -175,7 +177,7 @@ tbody tr td {
 tbody tr td a {
     text-decoration: none;
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 tbody tr td a:hover {
@@ -390,4 +392,53 @@ tbody tr td a:hover {
 .login .member a:hover {
     background-color: #888;
     color: #eee;
+}
+/* Các kiểu dáng cho màn hình nhỏ hơn 768px */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Thêm các điều chỉnh kiểu dáng khác nếu cần thiết cho màn hình nhỏ hơn */
+    .background {
+        padding: 15px 0px;
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        max-width: (100vh- 50px);
+    }
+    .background img {
+        max-height: 30px;
+        overflow: hidden;
+    }
+    .background menu{
+        font-size: 10px;
+        max-width: (80vh- 30px);
+        padding: 10px 5px;
+    }
+
+    .background a{
+        font-size: 10px;
+
+    }
+
+    .body {
+        flex-direction: column; /* Đổi chiều sắp xếp của các phần tử con */
+        height: auto; /* Chiều cao tự động thay vì 1000px */
+    }
+
+
+
+    /* Thêm các điều chỉnh khác nếu cần thiết */
+}
+@media only screen and (max-width:960px) {
+    .background {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .recent-gird {
+        grid-template-columns: 60% 40%;
+    }
+
+
 }

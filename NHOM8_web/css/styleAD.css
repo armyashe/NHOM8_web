@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-    --main-color: rgba(154, 182, 97, 0.534);
-    --color-dark: #1D2231;
-    --text-grey: #8390A2;
+    --main-color: rgba(36, 46, 58, 0.821);
+  
+    --color-dark: rgb(216, 218, 225);
+   /*  --text-grey: #8390A2; */
+   --text-grey:black;
 
 }
 
@@ -64,7 +66,7 @@
 .sidebar-menu a {
     padding-left: 1rem;
     display: block;
-    color: #1f1a1a;
+    color: #f6ebeb;
     font-size: 1.1rem;
 }
 
@@ -122,7 +124,7 @@ header {
 
     padding: 1rem 1.5rem;
     display: flex;
-    background-color: #fefefe40;
+    background-color: white;
     justify-content: space-between;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -254,7 +256,7 @@ a,a:hover {
     font-size: .8rem;
     line-height: 28px;
     font-weight: 500;
-    color: #161c24;
+    color: #dcdfe3;
 
 }
 
@@ -262,8 +264,8 @@ a,a:hover {
 main {
     margin-top: 55px;
     padding: 2rem 1.5rem;
-    
-    min-height: calc(100vh - 90px);
+    background-color: rgb(250, 247, 242);
+    min-height: calc(100vh - 50px);
 }
 
 .cards {
@@ -280,7 +282,7 @@ main {
     background-color: #fff;
     padding: 2rem;
     border-radius: 2px;
-    box-shadow: 0 5px 10px rgba(154, 182, 97, 0.534);
+    box-shadow: 0 5px 10px rgba(101, 112, 78, 0.534);
 }
 
 .card-single div:last-child span {
@@ -537,6 +539,8 @@ tr td:last-child {
 /* ==================== table ====================== */
 .table-outline {
     width: 100%;
+   
+    margin-top: 20px;
     
 }
 
@@ -549,6 +553,7 @@ tr td:last-child {
     color: #e4e7ea;
     background-color: #3e464d;
     border-color: #23282c;
+    border: 2px solid #e8eaed;
 }
 
 .table-header th {
@@ -565,8 +570,8 @@ tr td:last-child {
     transform: scale(1)
 }
 
-.table-header th,
-.table-content td {
+.table-header th
+ {
     padding: .75rem 0;
     text-align: center;
     vertical-align: top;
@@ -580,10 +585,13 @@ tr td:last-child {
     overflow: auto;
     margin: 0 auto;
     width: 100%;
+    box-shadow: 1px 1px 1px rgba(48, 47, 47, 0.2);
 }
+
 
 .table-content tr:nth-of-type(even) {
     background-color: #3e4144;
+    
 }
 
 .table-content td {
