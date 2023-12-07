@@ -558,7 +558,7 @@ input:checked + .slider:before {
     transition: .2s ease;
 }
 
-.close:hover {
+.close:hover {  
     color: #fff;
     background-color: #f33;
     border-radius: 50%;
