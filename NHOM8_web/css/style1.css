@@ -253,6 +253,7 @@ section {
 .pagination
 {
     text-align: end;
+    margin-top: 5%;
 }
 .pagination button
 {
