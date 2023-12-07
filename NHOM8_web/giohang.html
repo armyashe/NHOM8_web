@@ -58,7 +58,7 @@
                         </td>
                         <td>2.899.000₫</td>
                         <td>2.899.000₫</td>
-                        <td><i class="fa fa-trash" onclick="alert('Xác nhận hủy mua')"></i> </td>
+                        <td><i class="fa fa-trash" onclick="xoagiohang()"></i> </td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -72,7 +72,7 @@
                         </td>
                         <td>799.000₫</td>
                         <td>799.000₫</td>
-                        <td><i class="fa fa-trash" onclick="alert('Xác nhận hủy mua')"></i> </td>
+                        <td><i class="fa fa-trash" onclick="xoagiohang()"></i> </td>
                     </tr>
                     <tr>
                         <td>3</td>
@@ -86,7 +86,7 @@
                         </td>
                         <td>800.000₫</td>
                         <td>800.000₫</td>
-                        <td><i class="fa fa-trash" onclick="alert('Xác nhận hủy mua')"></i> </td>
+                        <td><i class="fa fa-trash" onclick="xoagiohang()"></i> </td>
                     </tr>
                     <tr>
                         <td>4</td>
@@ -100,13 +100,13 @@
                         </td>
                         <td>490.000₫</td>
                         <td>490.000₫</td>
-                        <td><i class="fa fa-trash" onclick="alert('Xác nhận hủy mua')"></i> </td>
+                        <td><i class="fa fa-trash" onclick="xoagiohang()"></i> </td>
                     </tr>
                     <tr style="font-weight:bold; text-align:center">
                         <td colspan="4">TỔNG TIỀN: </td>
                         <td class="alignRight">4.988.000₫</td>
                         <td class="thanhtoan" onclick="alert('Thanh toán thành công giỏ hàng')"> Thanh Toán </td>
-                        <td class="xoaHet" onclick="alert('Bạn có chắc chắn muốn xóa hết sản phẩm trong giỏ hàng !!!')">
+                        <td class="xoaHet" onclick="xoahetgiohang()">
                             Xóa hết </td>
                     </tr>
                     <tr >
@@ -152,5 +152,18 @@
         </div>
     </div>
 </body>
-
+<script>
+    function xoagiohang() {
+        var isConfirmed = confirm("Xác nhận hủy mua ???");
+        if (isConfirmed) {
+            alert("Hủy mua thành công");
+        }
+    }
+    function xoahetgiohang() {
+        var isConfirmed = confirm("Bạn có chắc chắn muốn xóa hết sản phẩm trong giỏ hàng ???");
+        if (isConfirmed) {
+            alert("Xóa sản phẩm thành công");
+        }
+    }
+</script>
 </html>
