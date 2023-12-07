@@ -321,6 +321,7 @@ main {
 .card-header,
 .card-body {
     padding: .8rem;
+    box-shadow: 0 5px 10px rgba(190, 194, 183, 0.534);
 
 }
 
@@ -414,7 +415,7 @@ tr td:last-child {
     margin-right: 1rem;
 }
 
-info h4 {
+.info h4 {
     font-size: .8rem;
     font-weight: 600;
     color: #222;
