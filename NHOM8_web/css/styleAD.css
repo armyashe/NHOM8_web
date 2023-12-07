@@ -538,12 +538,10 @@ tr td:last-child {
 }
 /* ==================== table ====================== */
 .table-outline {
-    width: 100%;
-   
+    width: 100%; 
     margin-top: 20px;
     
 }
-
 /* phần chứa header (th) */
 .table-header {
     width: 100%;
