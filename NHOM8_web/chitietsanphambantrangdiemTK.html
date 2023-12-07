@@ -12,7 +12,7 @@
 </head>
 
 <body>
-      
+
     <div class="background">
         <a href="sanpham.html"><img src="IMG/logo2.jpg" alt=""></a>
         <div class="menu">
@@ -20,17 +20,18 @@
             <a href="guongTK.html">Gương</a>
             <a href="bantrangdiemTK.html">Bàn trang điểm</a>
             <a href="dencayTK.html">Đèn cây</a>
+            <a href="giohang.html"><i class="fa fa-shopping-cart"></i><span>Giỏ hàng</span></a>
+
             <div class="login">
                 <a><i class="fa fa-user"></i>Nhóm 8</a>
                 <div class="member hide">
                     <a href="history.html">Lịch sử đơn hàng</a>
+                    <a href="sanpham.html">Đăng xuất</a>
                 </div>
             </div>
-            <a href="sanpham.html">Đăng xuất</a>
-            <a href="giohang.html"><i class="fa fa-shopping-cart"></i><span>Giỏ hàng</span></a>
+
         </div>
     </div>
-    <hr style="border: 2px solid black;">
     <div class="container">
         <div class="top">
             <div class="picture">
@@ -45,7 +46,7 @@
             <div class="content">
                 <h2 class="name">Bàn Trang Điểm TC22</h2>
                 <div class="info">
-                    Chất liệu : Gỗ công nghiệp chống ẩm. 
+                    Chất liệu : Gỗ công nghiệp chống ẩm.
                     <br>Kích thước : 100CM, 120CM, 80CM, Mặt Bàn 100cm, Mặt Bàn 120cm, Mặt Bàn 80cm
                     <br>Khung viền : Kim loại
                     <br>Màu : Trắng, Đen, màu tùy chọn
@@ -91,19 +92,20 @@
     }
     var hinh = document.getElementById('productImage');
 
-            hinh.addEventListener('mousemove', function (event) {
-                var rect = hinh.getBoundingClientRect();
-                var x = event.clientX - rect.left; // X coordinate within the element
-                var y = event.clientY - rect.top;  // Y coordinate within the element
+    hinh.addEventListener('mousemove', function (event) {
+        var rect = hinh.getBoundingClientRect();
+        var x = event.clientX - rect.left; // X coordinate within the element
+        var y = event.clientY - rect.top;  // Y coordinate within the element
 
-                var percentX = (x / rect.width) * 100;
-                var percentY = (y / rect.height) * 100;
+        var percentX = (x / rect.width) * 100;
+        var percentY = (y / rect.height) * 100;
 
-                hinh.style.objectPosition = percentX + '% ' + percentY + '%';
-            });
+        hinh.style.objectPosition = percentX + '% ' + percentY + '%';
+    });
 
-            hinh.addEventListener('mouseleave', function () {
-                hinh.style.objectPosition = 'center center'; // Reset to the center position or any other default position you want
-            });
+    hinh.addEventListener('mouseleave', function () {
+        hinh.style.objectPosition = 'center center'; // Reset to the center position or any other default position you want
+    });
 </script>
+
 </html>

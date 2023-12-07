@@ -11,7 +11,7 @@ body {
 
 .header {
     height: 10%;
-    padding: 20px 50px;
+    padding: 15px 50px;
     display: flex;
     align-items: center;
     background: white;
@@ -20,6 +20,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: 2px groove #000;
 }
 
 .header img {
@@ -36,6 +37,7 @@ h1 {
     list-style: none;
     display: flex;
     width: 100%;
+    
 }
 
 .menu a {
@@ -43,7 +45,7 @@ h1 {
     font-size: 1.4rem;
     color: black;
     cursor: pointer;
-    margin: 0 2rem;
+    margin: 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

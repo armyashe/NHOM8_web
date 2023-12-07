@@ -13,10 +13,16 @@ body {
 }
 .background {
     height: 10%;
-    padding: 20px 0px;
+/*     padding: 15px 50px; */
     display: flex;
     align-items: center;
-    background-color: white;
+    background: white;
+    position: fixed;
+
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px groove #000;
+
 }
 
 .background img {
@@ -24,7 +30,8 @@ body {
     overflow: hidden;
 }
 
-h1 {
+.background h1 {
+    padding-top: 500px;
     text-align: center;
 }
 
@@ -121,6 +128,7 @@ h1 {
 .body_1{
     width: 90%;
     margin: 0 auto;  
+    padding-top: 100px;
 }
 .body_1 h3{
     padding-top: 20px;
