@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maxium-scale=1" />
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Chi tiết đơn hàng - Admin</title>
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle" style="display: none;">
+    <div class="sidebar">
+        <div class="sidebar-brand" style="padding-left: 1.5rem;">
+            <h2><span style="color: rgb(185,140,84);">INTERDIOR</span></h2>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="loginAdmin.html"><span class="las la-igloo"></span>
+                        <span>Bảng điều khiển</span></a>
+                </li>
+                <li>
+                    <a href="userAdmin.html"><span class="las la-users"></span>
+                        <span>Người dùng</span></a>
+                </li>
+                <li>
+                    <a href="orderAdmin.html" class="active"><span class="las la-shopping-bag"></span>
+                        <span>Đơn hàng</span></a>
+                </li>
+                <li>
+                    <a href="productAdmin.html"><span class="las la-shopping-bag"></span>
+                        <span>Sản phẩm</span></a>
+                </li>
+                <li>
+                    <a href="thongkeAdmin.html"><span class="fa fa-bar-chart" aria-hidden="true"></span>
+                    <span>Thống kê</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                Chi tiết đơn hàng
+            </h2>
+
+
+            <div class="search-wrapper">
+                <input type="search" placeholder="Nhập tên sản phẩm">
+                <a href="productAdmin.html"><span class="las la-search"></span></a>
+            </div>
+
+            <div class="dropdown">
+                <span>
+                    <div class="user-wrapper">
+                        <img src="../IMG/AD1.jpg" width="40px" height="40px" alt="">Thanh
+                    </div>
+
+                </span>
+            </div>
+        </header>
+
+        <main>
+            <div class="cards">
+                <table class="table-header">
+                    <tr>
+                        <!-- Theo độ rộng của table content -->
+                        <th title="Sắp xếp" style="width: 5%">Stt <!-- <i class="fa fa-sort"></i> --></th>
+                        <th title="Sắp xếp" style="width: 20%">Sản phẩm </th>
+                        <th title="Sắp xếp" style="width: 15%">Tổng tiền </th>
+
+                        <th title="Sắp xếp" style="width: 10%">Số Lượng </th>
+
+                        <th title="">Địa chỉ</th>
+                    </tr>
+                </table>
+                <div class="table-content">
+                    <table class="table-outline hideImg">
+                        <tr>
+                            <td style="width: 5%">1</td>
+                            <td style="width: 20%">
+                                <a title="Xem chi tiết" target="_blank" href="../chitietsanphambantrangdiemTK.html" style="align-items: center;">Bàn
+                                    trang điểm TC22</a>
+                                <img src="../IMG/Ban_trang_diem_TC22.jpg"></img>
+                            </td>
+                            <td style="width: 15%">799.000₫</td>
+                            <td style="width: 10%;">6</td>
+                            <td>Số 1, Đại Cồ Việt, Hai Bà Trưng, Hà Nội</td>
+                        </tr>
+
+                        <tr style=" text-align:center; ">
+                            <td colspan="4" style="width: 40%; color: white; font-weight: bolder;">TỔNG TIỀN: </td>
+                            <td class="alignRight" style="color: white;font-weight: bolder;">4.794.000₫</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
